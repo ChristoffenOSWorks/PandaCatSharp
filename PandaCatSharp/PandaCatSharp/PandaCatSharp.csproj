@@ -39,7 +39,7 @@
     <Compile Include="StrLenFind.cs" />
     <Compile Include="BoxParts.cs" />
     <Compile Include="TextBoxes.cs" />
-    <Compile Include="ToCairo.cs" />
+    <Compile Include="LineTo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
