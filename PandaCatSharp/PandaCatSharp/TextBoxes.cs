@@ -6,44 +6,6 @@ public class TextBoxes : PandaCat {
 	public BoxParts boxParts = new BoxParts();
 	public StrLenFind spacer = new StrLenFind();		
 
-	public void choiceBox () {
-		boxParts.head1FullTop ();
-
-		Console.Write (newline + Space3 + Vert + crtOne);
-		spacer.crt3Remaining ();
-		Console.Write(Vert);
-	
-		boxParts.subheading1();
-
-		Console.Write (newline + Space3 + Vert + crtTwo); 
-		spacer.crt2Remaining ();
-		Console.Write(Vert);
-
-		boxParts.subheading1 ();
-		Console.Write (newline + Space3 + Vert + crtThree + Vert);
-		boxParts.head1FullBottom ();
-	}
-
-	public void toCairoResultsBox() {
-		boxParts.head1FullTop ();
-
-		Console.Write (newline + Space3 + Vert + result1);
-		spacer.result1Space ();
-		Console.Write (Vert);
-
-		boxParts.subheading1 ();
-	}
-		
-	public void toCairoResultsBox2() {
-		boxParts.subheading1 ();
-
-		Console.Write (newline + Space3 + Vert + exit);
-		spacer.exitSpace ();
-		Console.Write(Vert);
-
-		boxParts.head1FullBottom ();		
-	}
-
 	public void CustomBox1(String line1) {
 		length1 = line1.Length;
 		Console.Write (newline + Space3 + TL);
@@ -86,7 +48,7 @@ public class TextBoxes : PandaCat {
 
 			//Content - Line 2
 			Console.Write(newline + Space3 + Vert + line2);
-			spacer.customSpace (line1, line2);
+			spacer.customSpace1 (line1, line2);
 			Console.Write (Vert);
 
 			//Bottom Border
@@ -112,7 +74,7 @@ public class TextBoxes : PandaCat {
 
 			//Content - Line 1
 			Console.Write(newline + Space3 + Vert + line1);
-			spacer.customSpace (line2, line1);
+			spacer.customSpace1 (line2, line1);
 			Console.Write (Vert);
 
 			//Separator Border
@@ -131,6 +93,140 @@ public class TextBoxes : PandaCat {
 			Console.Write (BR);
 		} else {
 			Console.Write ("Issues");
+		}
+	}
+
+	public void CustomBox3(String line1, String line2, String line3) {
+		length1 = line1.Length;
+		length2 = line2.Length;
+		length3 = line3.Length;
+
+		if ((length1 > length2) && (length1 > length3)) {
+			
+			//Top Box Border
+			Console.Write (newline + Space3 + TL);
+			while (length1 > 0) {
+				Console.Write (heading);
+				length1 -= 1;
+			}			
+			Console.Write (TR);
+
+			//Content - Line 1
+			Console.Write (newline + Space3 + Vert + line1 + Vert);
+
+			//Separator Border 1
+			boxParts.customSub (line1);
+
+			//Content - Line 2
+			Console.Write (newline + Space3 + Vert + line2);
+			spacer.customSpace1 (line1, line2);
+			Console.Write (Vert);
+
+			//Separator Border 2
+			boxParts.customSub (line1);
+
+			//Content - Line 3
+			Console.Write (newline + Space3 + Vert + line3);
+			spacer.customSpace1 (line1, line3);
+			Console.Write (Vert);
+
+			//Bottom Border
+			length1 = line1.Length;
+			Console.Write (newline + Space3 + BL);
+			while (length1 > 0) {
+				Console.Write (heading);
+				length1 -= 1;
+			}			
+			Console.Write (BR);
+
+		} else if ((length2 > length1) && (length2 > length3)) {
+			
+			length1 = line1.Length;
+			length2 = line2.Length;
+			length3 = line3.Length;
+
+			//Top Box Border
+			Console.Write (newline + Space3 + TL);
+			while (length2 > 0) {
+				Console.Write (heading);
+				length2 -= 1;
+			}			
+			Console.Write (TR);
+
+			//Content - Line 1
+			Console.Write (newline + Space3 + Vert + line1);
+			spacer.customSpace1 (line2, line1);
+			Console.Write (Vert);
+
+			//Separator Border
+			boxParts.customSub (line2);
+
+			//Content - Line 2
+			Console.Write (newline + Space3 + Vert + line2 + Vert);
+
+			//Separator Border 2
+			boxParts.customSub (line2);
+
+			//Content - Line 3
+			Console.Write (newline + Space3 + Vert + line3);
+			spacer.customSpace1 (line2, line3);
+			Console.Write (Vert);
+
+			//Bottom Border
+			length2 = line2.Length;
+			Console.Write (newline + Space3 + BL);
+			while (length2 > 0) {
+				Console.Write (heading);
+				length2 -= 1;
+			}			
+			Console.Write (BR);
+
+		} else if ((length3 > length1) && (length3 > length2)) {
+			
+			length1 = line1.Length;
+			length2 = line2.Length;
+			length3 = line3.Length;
+
+			//Top Box Border
+			Console.Write (newline + Space3 + TL);
+			while (length3 > 0) {
+				Console.Write (heading);
+				length3 -= 1;
+			}			
+			Console.Write (TR);
+
+			//Content - Line 1
+			Console.Write(newline + Space3 + Vert + line1);
+			spacer.customSpace1 (line3, line1);
+			Console.Write (Vert);
+
+			//Separator Border
+			boxParts.customSub(line3);
+
+			//Content - Line 2
+			Console.Write(newline + Space3 + Vert + line2);
+			spacer.customSpace1 (line3, line2);
+			Console.Write (Vert);
+
+			//Separator Border 2
+			boxParts.customSub (line3);
+
+			//Content - Line 3
+			Console.Write (newline + Space3 + Vert + line3 + Vert);
+
+			//Bottom Border
+			length3 = line3.Length;
+			Console.Write (newline + Space3 + BL);
+			while (length3 > 0) {
+				Console.Write (heading);
+				length3 -= 1;
+			}			
+			Console.Write (BR);
+
+		} else {
+
+			Console.Write ("Issues");
+		
 		}
 	}
 }

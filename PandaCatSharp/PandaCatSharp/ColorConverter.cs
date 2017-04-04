@@ -24,7 +24,7 @@ public class ColorConverter : PandaCat {
 	private String b4;
 
 	public void choice() {
-		textBox.choiceBox ();
+		textBox.CustomBox3 (crtOne, crtTwo, crtThree);
 		Console.Write (newline + newline + Space3 + ">> ");
 		String choice = Console.ReadLine ();
 		if (choice == "cairo") {
@@ -165,20 +165,7 @@ public class ColorConverter : PandaCat {
 		Console.ForegroundColor = ConsoleColor.White;
 		Console.BackgroundColor = ConsoleColor.DarkMagenta;
 		Console.Clear ();
-
-		textBox.toCairoResultsBox ();
-
-		Console.Write (newline + Space3 + Vert + setSourceRGBAStart + r4 + end + g4 + end + b4 + toCairoEnd);
-			
-		length1 = crtThree.Length;
-		length2 = setSourceRGBAStart.Length + r4.Length + end.Length + g4.Length + end.Length + b4.Length + toCairoEnd.Length;
-		while (length1 > length2) {
-			Console.Write (" ");
-			length2 += 1;
-		}
-		Console.Write(Vert);
-
-		textBox.toCairoResultsBox2 ();
+		textBox.CustomBox3 (result1, setSourceRGBAStart + r4 + end + g4 + end + b4 + toCairoEnd, exit);
 	}
 		
 	public void checkPath() {

@@ -35,7 +35,8 @@ public class PandaCat {
 	public String crtTwo = "Script to convert between sane-people RGB and near retard-level Cairo API.";
 	public static int length1;
 	public static int length2;
-		
+	public static int length3;
+
 	public String Step1C = "Step 1 - Complete!";
 	public String Step2C = "Step 2 - Complete!";
 	public String Step3C = "Step 3 - Complete!";
