@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 public class PandaCat {
+	public static String filename;
+
 	public String Space1 = "        ";
 	public String Space2 = "            ";
 	public static String Space3 = "    ";
@@ -48,14 +51,35 @@ public class PandaCat {
 	public String rgb1 = "This is the Cairo-RGB color converter";
 	public String rgb2 = "When you're done, hit enter to move to the next screen.";
 
+	public String result2 = "Your values have been converted from Cairo C API to standard RGB:";
+
 	public String yourAnswer = "Your answer was: ";
 
 	public String result1 = "You can now paste the following function to a Cairo C application";
-		
+	public static String file;	
+	public static String filedesc1 = "This application will write C files to the folder it is run in.";
+	public static String filedesc2 = "C files are generated here using the Cairo API, so you don't have to write them.";
+	public static String filedesc3 = "So, what would you like to name the new C file generated this run?";
+
+	public String ltIntro = "Now for the LineTo() generator, which also generates a Cairo C function.";
+	public String xval = "Please enter the X value to plot.";
+	public String yval = "Please enter the Y value to plat.";
+
+
 	public static void Main (string[] args) {
 		Console.ForegroundColor = ConsoleColor.White;
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
+
+		TextBoxes textBox = new TextBoxes ();
+		textBox.CustomBox3 (filedesc1, filedesc2, filedesc3);
+		Console.Write (newline + Space3 + ">> ");
+		filename = Console.ReadLine ();
+		file = filename;
+
+		using (StreamWriter write = File.AppendText (file + ".c")) {
+				write.WriteLine ("#include" + newline);
+		}
 
 		ColorConverter converter = new ColorConverter();
 		converter.choice ();
@@ -63,10 +87,6 @@ public class PandaCat {
 		//Console.WriteLine (newline + "Press ENTER key to exit");
 		Console.Write (newline + Space3 + ">> ");
 		Console.ReadLine ();
-
-		Console.ForegroundColor = ConsoleColor.White;
-		Console.BackgroundColor = ConsoleColor.Red;
-		Console.Clear ();
 
 		LineTo lineTo = new LineTo ();
 		lineTo.Logic ();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.IO;
 
 public class ColorConverter : PandaCat {
 	public TextBoxes textBox = new TextBoxes();
@@ -28,10 +29,8 @@ public class ColorConverter : PandaCat {
 		Console.Write (newline + newline + Space3 + ">> ");
 		String choice = Console.ReadLine ();
 		if (choice == "cairo") {
-			//Console.Write (newline);
 			toCairo ();
 		} else {
-			//Console.Write (newline);
 			toRGB ();
 		}
 	}
@@ -40,6 +39,7 @@ public class ColorConverter : PandaCat {
 		Console.ForegroundColor = ConsoleColor.White;
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
+		textBox.CustomBox1("Writing to: " + file);
 		textBox.CustomBox2 (rgb1, rgb2);
 
 		Console.WriteLine (Space3);
@@ -67,7 +67,6 @@ public class ColorConverter : PandaCat {
 		g2 = g1 * 255;
 		g3 = Math.Round (g2); 
 		g4 = g3.ToString ();
-		//Console.WriteLine (newline);
 
 		Console.ForegroundColor = ConsoleColor.White;
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
@@ -94,13 +93,14 @@ public class ColorConverter : PandaCat {
 		textBox.CustomBox2 (Step2C, yourAnswer + g0);
 		textBox.CustomBox2 (Step3C, yourAnswer + b0);
 
-		Console.Write (newline + Space3 + before + r4 + end + g4 + end + b4);
+		toRGBResult ();
 	}
 
 	public void toCairo() {
 		Console.ForegroundColor = ConsoleColor.White;
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
+		textBox.CustomBox1("Writing to: " + file);
 		textBox.CustomBox2 (rgb1, rgb2);
 
 		Console.Write (Space3);
@@ -165,7 +165,20 @@ public class ColorConverter : PandaCat {
 		Console.ForegroundColor = ConsoleColor.White;
 		Console.BackgroundColor = ConsoleColor.DarkMagenta;
 		Console.Clear ();
+
+		using (StreamWriter write2 = File.AppendText(file + ".c")) 
+		{
+			write2.WriteLine(setSourceRGBAStart + r4 + end + g4 + end + b4 + toCairoEnd + newline);
+		}	
+
 		textBox.CustomBox3 (result1, setSourceRGBAStart + r4 + end + g4 + end + b4 + toCairoEnd, exit);
+	}
+
+	public void toRGBResult() {
+		Console.ForegroundColor = ConsoleColor.White;
+		Console.BackgroundColor = ConsoleColor.DarkMagenta;
+		Console.Clear ();
+		textBox.CustomBox3 (result2, before + r4 + end + g4 + end + b4, exit);
 	}
 		
 	public void checkPath() {
