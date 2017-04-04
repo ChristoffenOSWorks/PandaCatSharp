@@ -5,6 +5,24 @@ public class ColorConverter : PandaCat {
 	public TextBoxes textBox = new TextBoxes();
 	public StrLenFind spacer = new StrLenFind ();
 
+	private String r0;
+	private float r1;
+	private float r2;
+	private double r3;
+	private String r4;
+
+	private String g0;
+	private float g1;
+	private float g2;
+	private double g3;
+	private String g4;
+
+	private String b0;
+	private float b1;
+	private float b2;
+	private double b3;
+	private String b4;
+
 	public void choice() {
 		textBox.choiceBox ();
 		Console.Write (newline + newline + Space3 + ">> ");
@@ -25,7 +43,7 @@ public class ColorConverter : PandaCat {
 		textBox.CustomBox2 (rgb1, rgb2);
 
 		Console.WriteLine (Space3);
-		textBox.convertBoxR ();
+		textBox.CustomBox2 (Step1, convertR);
 		Console.Write (newline + Space3 + ">> ");
 		String r = Console.ReadLine ();
 		r0 = r;
@@ -33,17 +51,15 @@ public class ColorConverter : PandaCat {
 		r2 = r1 * 255;
 		r3 = Math.Round (r2); 
 		r4 = r3.ToString ();
-		r5 = r4;
-		//Console.WriteLine (newline);
 
 		Console.ForegroundColor = ConsoleColor.White;
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
 		textBox.CustomBox2 (rgb1, rgb2);
-		textBox.convertRDone (r0);
+		textBox.CustomBox2 (Step1C, yourAnswer + r0);
 
 		Console.WriteLine (Space3);
-		textBox.convertBoxG ();
+		textBox.CustomBox2 (Step2, convertG);
 		Console.Write (newline + Space3 + ">> ");
 		String g = Console.ReadLine ();
 		g0 = g;
@@ -57,11 +73,11 @@ public class ColorConverter : PandaCat {
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
 		textBox.CustomBox2 (rgb1, rgb2);
-		textBox.convertRDone (r0);
-		textBox.convertGDone (g0);
+		textBox.CustomBox2 (Step1C, yourAnswer + r0);
+		textBox.CustomBox2 (Step2C, yourAnswer + g0);
 
 		Console.WriteLine (Space3);
-		textBox.convertBoxB ();
+		textBox.CustomBox2 (Step3, convertB);
 		Console.Write (newline + Space3 + ">> ");
 		String b = Console.ReadLine ();
 		b0 = b;
@@ -74,9 +90,9 @@ public class ColorConverter : PandaCat {
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
 		textBox.CustomBox2 (rgb1, rgb2);
-		textBox.convertRDone (r0);
-		textBox.convertGDone (g0);
-		textBox.convertBDone (b0);
+		textBox.CustomBox2 (Step1C, yourAnswer + r0);
+		textBox.CustomBox2 (Step2C, yourAnswer + g0);
+		textBox.CustomBox2 (Step3C, yourAnswer + b0);
 
 		Console.Write (newline + Space3 + before + r4 + end + g4 + end + b4);
 	}
@@ -88,7 +104,7 @@ public class ColorConverter : PandaCat {
 		textBox.CustomBox2 (rgb1, rgb2);
 
 		Console.Write (Space3);
-		textBox.convertBoxR ();
+		textBox.CustomBox2 (Step1, convertR);
 		Console.Write (newline + Space3 + ">> ");
 		String r = Console.ReadLine ();
 		r0 = r;
@@ -101,10 +117,10 @@ public class ColorConverter : PandaCat {
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
 		textBox.CustomBox2 (rgb1, rgb2);
-		textBox.convertRDone (r0);
+		textBox.CustomBox2 (Step1C, yourAnswer + r0);
 
 		Console.Write (Space3);
-		textBox.convertBoxG ();
+		textBox.CustomBox2 (Step2, convertG);
 		Console.Write (newline + Space3 + ">> ");
 		String g = Console.ReadLine ();
 		g0 = g;
@@ -117,11 +133,11 @@ public class ColorConverter : PandaCat {
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
 		textBox.CustomBox2 (rgb1, rgb2);
-		textBox.convertRDone (r0);
-		textBox.convertGDone (g0);
+		textBox.CustomBox2 (Step1C, yourAnswer + r0);
+		textBox.CustomBox2 (Step2C, yourAnswer + g0);
 
 		Console.Write (Space3);
-		textBox.convertBoxB ();
+		textBox.CustomBox2 (Step3, convertB);
 		Console.Write (newline + Space3 + ">> ");
 		String b = Console.ReadLine ();
 		b0 = b;
@@ -135,9 +151,9 @@ public class ColorConverter : PandaCat {
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
 		textBox.CustomBox2 (rgb1, rgb2);
-		textBox.convertRDone (r0);
-		textBox.convertGDone (g0);
-		textBox.convertBDone (b0);
+		textBox.CustomBox2 (Step1C, yourAnswer + r0);
+		textBox.CustomBox2 (Step2C, yourAnswer + g0);
+		textBox.CustomBox2 (Step3C, yourAnswer + b0);
 
 		Console.Write (newline + Space3 + "Press ENTER to see results! >> ");
 		Console.ReadLine ();	

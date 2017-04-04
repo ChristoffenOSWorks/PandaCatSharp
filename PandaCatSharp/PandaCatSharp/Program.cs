@@ -30,24 +30,6 @@ public class PandaCat {
 	public String setSourceRGBAStart = "cairo_set_source_rgba(cr, ";
 	public String toCairoEnd = ", 0.8);";
 	public String exit = "Press ENTER key to exit";
-	public String r0;
-	public float r1;
-	public float r2;
-	public double r3;
-	public String r4;
-	public String r5;
-
-	public String g0;
-	public float g1;
-	public float g2;
-	public double g3;
-	public String g4;
-
-	public String b0;
-	public float b1;
-	public float b2;
-	public double b3;
-	public String b4;
 
 	public String crtOne = "(c) 2017 M. Gage Morgan. All Rights Reserved. Project start date: 2/24/2017";
 	public String crtTwo = "Script to convert between sane-people RGB and near retard-level Cairo API.";
