@@ -21,11 +21,12 @@ public class PandaCat {
 	public String end = ", ";
 	public String quote = "\"";
 	public String heading = "═";
-	public String Vert = "║";
-	public String TL = "╔";
-	public String TR = "╗";
-	public String BL = "╚";
-	public String BR = "╝";
+	public String Vert2 = " ║";
+	public String Vert1 = "║ ";
+	public String TL = "╔═";
+	public String TR = "═╗";
+	public String BL = "╚═";
+	public String BR = "═╝";
 	public String LW = "╟";
 	public String RW = "╢";
 	public String subheading = "─";
@@ -65,7 +66,6 @@ public class PandaCat {
 	public String xval = "Please enter the X value to plot.";
 	public String yval = "Please enter the Y value to plat.";
 
-
 	public static void Main (string[] args) {
 		Console.ForegroundColor = ConsoleColor.White;
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
@@ -75,10 +75,35 @@ public class PandaCat {
 		textBox.CustomBox3 (filedesc1, filedesc2, filedesc3);
 		Console.Write (newline + Space3 + ">> ");
 		filename = Console.ReadLine ();
+		if (String.IsNullOrEmpty (filename)) {
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.BackgroundColor = ConsoleColor.DarkCyan;
+			Console.Clear ();
+
+			while (String.IsNullOrEmpty (filename)) {
+				Console.ForegroundColor = ConsoleColor.Red;
+				Console.BackgroundColor = ConsoleColor.Black;
+				Console.Clear ();
+
+				textBox.CustomBox1 (Space3 + "If this is Elijah, it is an ID10T error. let's try this again.");
+				filename = Console.ReadLine ();
+
+				continue;
+			} 
+
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.BackgroundColor = ConsoleColor.DarkCyan;
+			Console.Clear ();
+		}	
 		file = filename;
 
+//		if (String.IsNullOrEmpty (filename)) {
+//			Console.Clear ();
+//			Console.WriteLine ("FAILURE");
+//		}
+
 		using (StreamWriter write = File.AppendText (file + ".c")) {
-				write.WriteLine ("#include" + newline);
+			write.WriteLine ("#include" + newline);
 		}
 
 		ColorConverter converter = new ColorConverter();
@@ -90,7 +115,10 @@ public class PandaCat {
 
 		LineTo lineTo = new LineTo ();
 		lineTo.Logic ();
+	}
 
+	public void errExit() {
+		
 	}
 }
 

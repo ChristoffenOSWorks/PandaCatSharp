@@ -26,12 +26,12 @@ public class BoxParts : PandaCat {
 
 	public void customSub(String custom1) {
 		int length0 = custom1.Length;
-		Console.Write (newline + Space3 + LW);
+		Console.Write (newline + Space3 + Vert1);
 		while (length0 > 0) {
 			Console.Write (subheading);
 			length0 -= 1;
 		}
-		Console.Write (RW);
+		Console.Write (Vert2);
 	}
 
 

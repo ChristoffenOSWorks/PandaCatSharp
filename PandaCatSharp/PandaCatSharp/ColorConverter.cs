@@ -27,80 +27,89 @@ public class ColorConverter : PandaCat {
 	public void choice() {
 		textBox.CustomBox3 (crtOne, crtTwo, crtThree);
 		Console.Write (newline + newline + Space3 + ">> ");
-		String choice = Console.ReadLine ();
-		if (choice == "cairo") {
-			toCairo ();
-		} else {
-			toRGB ();
+		try {
+			String choice = Console.ReadLine ();
+			if (choice == "cairo") {
+				toCairo ();
+			} else {
+				toRGB ();
+			}
+		} catch (EmptyException) {
+			Console.Write("Failure already?");
 		}
+
 	}
 
 	public void toRGB () {
-		Console.ForegroundColor = ConsoleColor.White;
-		Console.BackgroundColor = ConsoleColor.DarkCyan;
-		Console.Clear ();
-		textBox.CustomBox1("Writing to: " + file);
-		textBox.CustomBox2 (rgb1, rgb2);
+		try {
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.BackgroundColor = ConsoleColor.DarkCyan;
+			Console.Clear ();
+			textBox.CustomBox1("Writing to: " + file + ".c");
+			textBox.CustomBox2 (rgb1, rgb2);
 
-		Console.WriteLine (Space3);
-		textBox.CustomBox2 (Step1, convertR);
-		Console.Write (newline + Space3 + ">> ");
-		String r = Console.ReadLine ();
-		r0 = r;
-		r1 = float.Parse(r0);
-		r2 = r1 * 255;
-		r3 = Math.Round (r2); 
-		r4 = r3.ToString ();
+			Console.WriteLine (Space3);
+			textBox.CustomBox2 (Step1, convertR);
+			Console.Write (newline + Space3 + ">> ");
+			String r = Console.ReadLine ();
+			r0 = r;
+			r1 = float.Parse(r0);
+			r2 = r1 * 255;
+			r3 = Math.Round (r2); 
+			r4 = r3.ToString ();
 
-		Console.ForegroundColor = ConsoleColor.White;
-		Console.BackgroundColor = ConsoleColor.DarkCyan;
-		Console.Clear ();
-		textBox.CustomBox2 (rgb1, rgb2);
-		textBox.CustomBox2 (Step1C, yourAnswer + r0);
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.BackgroundColor = ConsoleColor.DarkCyan;
+			Console.Clear ();
+			textBox.CustomBox2 (rgb1, rgb2);
+			textBox.CustomBox2 (Step1C, yourAnswer + r0);
 
-		Console.WriteLine (Space3);
-		textBox.CustomBox2 (Step2, convertG);
-		Console.Write (newline + Space3 + ">> ");
-		String g = Console.ReadLine ();
-		g0 = g;
-		g1 = float.Parse(g0);
-		g2 = g1 * 255;
-		g3 = Math.Round (g2); 
-		g4 = g3.ToString ();
+			Console.WriteLine (Space3);
+			textBox.CustomBox2 (Step2, convertG);
+			Console.Write (newline + Space3 + ">> ");
+			String g = Console.ReadLine ();
+			g0 = g;
+			g1 = float.Parse(g0);
+			g2 = g1 * 255;
+			g3 = Math.Round (g2); 
+			g4 = g3.ToString ();
 
-		Console.ForegroundColor = ConsoleColor.White;
-		Console.BackgroundColor = ConsoleColor.DarkCyan;
-		Console.Clear ();
-		textBox.CustomBox2 (rgb1, rgb2);
-		textBox.CustomBox2 (Step1C, yourAnswer + r0);
-		textBox.CustomBox2 (Step2C, yourAnswer + g0);
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.BackgroundColor = ConsoleColor.DarkCyan;
+			Console.Clear ();
+			textBox.CustomBox2 (rgb1, rgb2);
+			textBox.CustomBox2 (Step1C, yourAnswer + r0);
+			textBox.CustomBox2 (Step2C, yourAnswer + g0);
 
-		Console.WriteLine (Space3);
-		textBox.CustomBox2 (Step3, convertB);
-		Console.Write (newline + Space3 + ">> ");
-		String b = Console.ReadLine ();
-		b0 = b;
-		b1 = float.Parse(b0);
-		b2 = b1 * 255;
-		b3 = Math.Round (b2); 
-		b4 = b3.ToString ();
+			Console.WriteLine (Space3);
+			textBox.CustomBox2 (Step3, convertB);
+			Console.Write (newline + Space3 + ">> ");
+			String b = Console.ReadLine ();
+			b0 = b;
+			b1 = float.Parse(b0);
+			b2 = b1 * 255;
+			b3 = Math.Round (b2); 
+			b4 = b3.ToString ();
 
-		Console.ForegroundColor = ConsoleColor.White;
-		Console.BackgroundColor = ConsoleColor.DarkCyan;
-		Console.Clear ();
-		textBox.CustomBox2 (rgb1, rgb2);
-		textBox.CustomBox2 (Step1C, yourAnswer + r0);
-		textBox.CustomBox2 (Step2C, yourAnswer + g0);
-		textBox.CustomBox2 (Step3C, yourAnswer + b0);
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.BackgroundColor = ConsoleColor.DarkCyan;
+			Console.Clear ();
+			textBox.CustomBox2 (rgb1, rgb2);
+			textBox.CustomBox2 (Step1C, yourAnswer + r0);
+			textBox.CustomBox2 (Step2C, yourAnswer + g0);
+			textBox.CustomBox2 (Step3C, yourAnswer + b0);
 
-		toRGBResult ();
+			toRGBResult ();
+		} catch (System.FormatException) {
+			Console.WriteLine ("FAILURE");
+		}
 	}
 
 	public void toCairo() {
 		Console.ForegroundColor = ConsoleColor.White;
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
-		textBox.CustomBox1("Writing to: " + file);
+		textBox.CustomBox1("Writing to: " + file + ".c");
 		textBox.CustomBox2 (rgb1, rgb2);
 
 		Console.Write (Space3);
@@ -159,6 +168,7 @@ public class ColorConverter : PandaCat {
 		Console.ReadLine ();	
 
 		toCairoResult ();
+		Console.Write ("How did you fail this far in?");
 	}
 		
 	public void toCairoResult() {

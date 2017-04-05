@@ -15,7 +15,7 @@ public class TextBoxes : PandaCat {
 		}			
 		Console.Write (TR);
 
-		Console.Write (newline + Space3 + Vert + line1 + Vert);
+		Console.Write (newline + Space3 + Vert1 + line1 + Vert2);
 
 		length1 = line1.Length;
 		Console.Write (newline + Space3 + BL);
@@ -41,15 +41,15 @@ public class TextBoxes : PandaCat {
 			Console.Write (TR);
 
 			//Content - Line 1
-			Console.Write (newline + Space3 + Vert + line1 + Vert);
+			Console.Write (newline + Space3 + Vert1 + line1 + Vert2);
 
 			//Separator Border
 			boxParts.customSub(line1);
 
 			//Content - Line 2
-			Console.Write(newline + Space3 + Vert + line2);
+			Console.Write(newline + Space3 + Vert1 + line2);
 			spacer.customSpace1 (line1, line2);
-			Console.Write (Vert);
+			Console.Write (Vert2);
 
 			//Bottom Border
 			length1 = line1.Length;
@@ -73,15 +73,15 @@ public class TextBoxes : PandaCat {
 			Console.Write (TR);
 
 			//Content - Line 1
-			Console.Write(newline + Space3 + Vert + line1);
+			Console.Write(newline + Space3 + Vert1 + line1);
 			spacer.customSpace1 (line2, line1);
-			Console.Write (Vert);
+			Console.Write (Vert2);
 
 			//Separator Border
 			boxParts.customSub(line2);
 
 			//Content - Line 2
-			Console.Write (newline + Space3 + Vert + line2 + Vert);
+			Console.Write (newline + Space3 + Vert1 + line2 + Vert2);
 
 			//Bottom Border
 			length2 = line2.Length;
@@ -112,23 +112,23 @@ public class TextBoxes : PandaCat {
 			Console.Write (TR);
 
 			//Content - Line 1
-			Console.Write (newline + Space3 + Vert + line1 + Vert);
+			Console.Write (newline + Space3 + Vert1 + line1 + Vert2);
 
 			//Separator Border 1
 			boxParts.customSub (line1);
 
 			//Content - Line 2
-			Console.Write (newline + Space3 + Vert + line2);
+			Console.Write (newline + Space3 + Vert1 + line2);
 			spacer.customSpace1 (line1, line2);
-			Console.Write (Vert);
+			Console.Write (Vert2);
 
 			//Separator Border 2
 			boxParts.customSub (line1);
 
 			//Content - Line 3
-			Console.Write (newline + Space3 + Vert + line3);
+			Console.Write (newline + Space3 + Vert1 + line3);
 			spacer.customSpace1 (line1, line3);
-			Console.Write (Vert);
+			Console.Write (Vert2);
 
 			//Bottom Border
 			length1 = line1.Length;
@@ -154,23 +154,23 @@ public class TextBoxes : PandaCat {
 			Console.Write (TR);
 
 			//Content - Line 1
-			Console.Write (newline + Space3 + Vert + line1);
+			Console.Write (newline + Space3 + Vert1 + line1);
 			spacer.customSpace1 (line2, line1);
-			Console.Write (Vert);
+			Console.Write (Vert2);
 
 			//Separator Border
 			boxParts.customSub (line2);
 
 			//Content - Line 2
-			Console.Write (newline + Space3 + Vert + line2 + Vert);
+			Console.Write (newline + Space3 + Vert1 + line2 + Vert2);
 
 			//Separator Border 2
 			boxParts.customSub (line2);
 
 			//Content - Line 3
-			Console.Write (newline + Space3 + Vert + line3);
+			Console.Write (newline + Space3 + Vert1 + line3);
 			spacer.customSpace1 (line2, line3);
-			Console.Write (Vert);
+			Console.Write (Vert2);
 
 			//Bottom Border
 			length2 = line2.Length;
@@ -196,23 +196,23 @@ public class TextBoxes : PandaCat {
 			Console.Write (TR);
 
 			//Content - Line 1
-			Console.Write(newline + Space3 + Vert + line1);
+			Console.Write(newline + Space3 + Vert1 + line1);
 			spacer.customSpace1 (line3, line1);
-			Console.Write (Vert);
+			Console.Write (Vert2);
 
 			//Separator Border
 			boxParts.customSub(line3);
 
 			//Content - Line 2
-			Console.Write(newline + Space3 + Vert + line2);
+			Console.Write(newline + Space3 + Vert1 + line2);
 			spacer.customSpace1 (line3, line2);
-			Console.Write (Vert);
+			Console.Write (Vert2);
 
 			//Separator Border 2
 			boxParts.customSub (line3);
 
 			//Content - Line 3
-			Console.Write (newline + Space3 + Vert + line3 + Vert);
+			Console.Write (newline + Space3 + Vert1 + line3 + Vert2);
 
 			//Bottom Border
 			length3 = line3.Length;

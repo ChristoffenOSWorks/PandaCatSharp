@@ -40,6 +40,7 @@
     <Compile Include="BoxParts.cs" />
     <Compile Include="TextBoxes.cs" />
     <Compile Include="LineTo.cs" />
+    <Compile Include="EmptyException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
