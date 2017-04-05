@@ -40,6 +40,10 @@ public class ColorConverter : PandaCat {
 
 	}
 
+	private String r;
+	private String g;
+	private String b;
+
 	public void toRGB () {
 		try {
 			Console.ForegroundColor = ConsoleColor.White;
@@ -51,7 +55,7 @@ public class ColorConverter : PandaCat {
 			Console.WriteLine (Space3);
 			textBox.CustomBox2 (Step1, convertR);
 			Console.Write (newline + Space3 + ">> ");
-			String r = Console.ReadLine ();
+			r = Console.ReadLine ();
 			r0 = r;
 			r1 = float.Parse(r0);
 			r2 = r1 * 255;
@@ -67,7 +71,7 @@ public class ColorConverter : PandaCat {
 			Console.WriteLine (Space3);
 			textBox.CustomBox2 (Step2, convertG);
 			Console.Write (newline + Space3 + ">> ");
-			String g = Console.ReadLine ();
+			g = Console.ReadLine ();
 			g0 = g;
 			g1 = float.Parse(g0);
 			g2 = g1 * 255;
@@ -84,7 +88,7 @@ public class ColorConverter : PandaCat {
 			Console.WriteLine (Space3);
 			textBox.CustomBox2 (Step3, convertB);
 			Console.Write (newline + Space3 + ">> ");
-			String b = Console.ReadLine ();
+			b = Console.ReadLine ();
 			b0 = b;
 			b1 = float.Parse(b0);
 			b2 = b1 * 255;
@@ -101,7 +105,116 @@ public class ColorConverter : PandaCat {
 
 			toRGBResult ();
 		} catch (System.FormatException) {
-			Console.WriteLine ("FAILURE");
+
+			if ((String.IsNullOrEmpty (r))) {
+				Console.ForegroundColor = ConsoleColor.Red;
+				Console.BackgroundColor = ConsoleColor.Black;
+				Console.Clear ();
+
+				while (String.IsNullOrEmpty (r) == true) {
+					textBox.CustomBox1 ("Missing R value");
+
+					Console.Write (newline + Space3 + ">> ");
+					r = Console.ReadLine ();
+				} 
+
+				r0 = r;
+				r1 = float.Parse(r0);
+				r2 = r1 * 255;
+				r3 = Math.Round (r2); 
+				r4 = r3.ToString ();
+
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.BackgroundColor = ConsoleColor.DarkCyan;
+				Console.Clear ();
+				textBox.CustomBox2 (rgb1, rgb2);
+				textBox.CustomBox2 (Step1C, yourAnswer + r0);
+
+				Console.WriteLine (Space3);
+				textBox.CustomBox2 (Step2, convertG);
+				Console.Write (newline + Space3 + ">> ");
+				g = Console.ReadLine ();
+				g0 = g;
+				g1 = float.Parse(g0);
+				g2 = g1 * 255;
+				g3 = Math.Round (g2); 
+				g4 = g3.ToString ();
+
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.BackgroundColor = ConsoleColor.DarkCyan;
+				Console.Clear ();
+				textBox.CustomBox2 (rgb1, rgb2);
+				textBox.CustomBox2 (Step1C, yourAnswer + r0);
+				textBox.CustomBox2 (Step2C, yourAnswer + g0);
+
+				Console.WriteLine (Space3);
+				textBox.CustomBox2 (Step3, convertB);
+				Console.Write (newline + Space3 + ">> ");
+				b = Console.ReadLine ();
+				b0 = b;
+				b1 = float.Parse(b0);
+				b2 = b1 * 255;
+				b3 = Math.Round (b2); 
+				b4 = b3.ToString ();
+
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.BackgroundColor = ConsoleColor.DarkCyan;
+				Console.Clear ();
+				textBox.CustomBox2 (rgb1, rgb2);
+				textBox.CustomBox2 (Step1C, yourAnswer + r0);
+				textBox.CustomBox2 (Step2C, yourAnswer + g0);
+				textBox.CustomBox2 (Step3C, yourAnswer + b0);
+
+				toRGBResult ();
+			} else if ((String.IsNullOrEmpty (g0))) {
+				Console.ForegroundColor = ConsoleColor.Red;
+				Console.BackgroundColor = ConsoleColor.Black;
+				Console.Clear ();
+
+				while (String.IsNullOrEmpty (g) == true) {
+					textBox.CustomBox1 ("Missing R value");
+
+					Console.Write (newline + Space3 + ">> ");
+					g = Console.ReadLine ();
+				} 
+					
+				g0 = g;
+				g1 = float.Parse(g0);
+				g2 = g1 * 255;
+				g3 = Math.Round (g2); 
+				g4 = g3.ToString ();
+
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.BackgroundColor = ConsoleColor.DarkCyan;
+				Console.Clear ();
+				textBox.CustomBox2 (rgb1, rgb2);
+				textBox.CustomBox2 (Step1C, yourAnswer + r0);
+				textBox.CustomBox2 (Step2C, yourAnswer + g0);
+
+				Console.WriteLine (Space3);
+				textBox.CustomBox2 (Step3, convertB);
+				Console.Write (newline + Space3 + ">> ");
+				b = Console.ReadLine ();
+				b0 = b;
+				b1 = float.Parse(b0);
+				b2 = b1 * 255;
+				b3 = Math.Round (b2); 
+				b4 = b3.ToString ();
+
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.BackgroundColor = ConsoleColor.DarkCyan;
+				Console.Clear ();
+				textBox.CustomBox2 (rgb1, rgb2);
+				textBox.CustomBox2 (Step1C, yourAnswer + r0);
+				textBox.CustomBox2 (Step2C, yourAnswer + g0);
+				textBox.CustomBox2 (Step3C, yourAnswer + b0);
+
+				toRGBResult ();			
+			} else if ((String.IsNullOrEmpty (b0))) {
+				textBox.CustomBox1 ("Missing B value");
+			} else {
+				textBox.CustomBox1 ("This shouldn't appear, and if it did, you're on the short bus!");
+			}
 		}
 	}
 

@@ -66,7 +66,26 @@ public class PandaCat {
 	public String xval = "Please enter the X value to plot.";
 	public String yval = "Please enter the Y value to plat.";
 
+	public static void empty(String variable) {
+		TextBoxes textBox = new TextBoxes ();
+
+		if (String.IsNullOrEmpty (variable)) {
+
+			while (String.IsNullOrEmpty (variable)) {
+				Console.ForegroundColor = ConsoleColor.Red;
+				Console.BackgroundColor = ConsoleColor.Black;
+				Console.Clear ();
+
+				textBox.CustomBox1 (Space3 + "If this is Elijah, it is an ID10T error. let's try this again.");
+				variable = Console.ReadLine ();
+
+				continue;
+			} 
+		}
+	}
+		
 	public static void Main (string[] args) {
+
 		Console.ForegroundColor = ConsoleColor.White;
 		Console.BackgroundColor = ConsoleColor.DarkCyan;
 		Console.Clear ();
@@ -85,22 +104,25 @@ public class PandaCat {
 				Console.BackgroundColor = ConsoleColor.Black;
 				Console.Clear ();
 
-				textBox.CustomBox1 (Space3 + "If this is Elijah, it is an ID10T error. let's try this again.");
+				textBox.CustomBox1 ("If this is Elijah, it is an ID10T error. let's try this again.");
+				textBox.CustomBox3 ("Everyone else using PandaCat (#LowlyAssistant):", "This error appears when nothing has been entered. Type something, ", "and you can move forward.");
+
+				Console.Write (newline + Space3 + ">> ");
 				filename = Console.ReadLine ();
 
 				continue;
 			} 
 
-			Console.ForegroundColor = ConsoleColor.White;
-			Console.BackgroundColor = ConsoleColor.DarkCyan;
-			Console.Clear ();
+		Console.ForegroundColor = ConsoleColor.White;
+		Console.BackgroundColor = ConsoleColor.DarkCyan;
+		Console.Clear ();
 		}	
 		file = filename;
 
-//		if (String.IsNullOrEmpty (filename)) {
-//			Console.Clear ();
-//			Console.WriteLine ("FAILURE");
-//		}
+		if (String.IsNullOrEmpty (filename)) {
+			Console.Clear ();
+			Console.WriteLine ("FAILURE");
+		}
 
 		using (StreamWriter write = File.AppendText (file + ".c")) {
 			write.WriteLine ("#include" + newline);
