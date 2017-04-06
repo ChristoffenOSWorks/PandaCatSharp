@@ -41,6 +41,8 @@
     <Compile Include="TextBoxes.cs" />
     <Compile Include="LineTo.cs" />
     <Compile Include="EmptyException.cs" />
+    <Compile Include="ToRGB.cs" />
+    <Compile Include="ToCairo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
