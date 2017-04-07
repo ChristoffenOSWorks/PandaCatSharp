@@ -5,67 +5,7 @@ using System.IO;
 namespace PandaCat {
 	public class Tabby {
 		public static String filename;
-
-		public static String[][] text = new String[][] {
-			
-			/**
-			 * Spaces at text[0][]
-			 **/
-			new String[] {
-				"        ",
-				"            ",
-				"    ",
-				"                "
-			},
-
-			/**
-			 * Copyrights at text[1][]
-			 **/
-			new String[] {
-				"(c) 2017 M. Gage Morgan. All Rights Reserved. Project start date: 2/24/2017",
-				"Script to convert between sane-people RGB and near retard-level Cairo API.",
-				"Type 'cairo' to convert to the Cairo-formatted RGB, or 'rgb' for the standard form."
-			},
-
-			/**
-			 * convertRGB at text[2][]
-			 **/
-			new String[] {
-				"Please enter the R, G, and B values for the outline of the image to be generated.",
-				"Enter the R value to be converted.",
-				"Enter the G value to be converted.",
-				"Enter the B value to be converted.",
-				"Before Cairo, the original RGB values are: "
-			},
-
-			/**
-			 * Box borders at text[3][]
-			 **/
-			new String[] {
-				"═",
-				" ║",
-				"║ ",
-				"╔═",
-				"═╗",
-				"╚═",
-				"═╝",
-				"╟",
-				"╢",
-				"─"
-			},
-
-			/**
-			 * Punctuation for terminal at text[4][]
-			 **/
-			new String[] {
-				">> ",
-				", ",
-				"\"",
-				"\n"
-			}
-			
-		};
-
+		public Text t = new Text ();
 		public String before = "Before Cairo, the original RGB values are: "; 
 //		public String end = ", ";
 		public String quote = "\"";
@@ -113,7 +53,7 @@ namespace PandaCat {
 					Console.BackgroundColor = ConsoleColor.Black;
 					Console.Clear ();
 
-					textBox.CustomBox1 (text[0][2] + "If this is Elijah, it is an ID10T error. let's try this again.");
+					textBox.CustomBox1 (Text.text[0][2] + "If this is Elijah, it is an ID10T error. let's try this again.");
 					variable = Console.ReadLine ();
 
 					continue;
@@ -129,7 +69,7 @@ namespace PandaCat {
 
 			TextBoxes textBox = new TextBoxes ();
 			textBox.CustomBox3 (filedesc1, filedesc2, filedesc3);
-			Console.Write (text[4][3] + text[0][2] + ">> ");
+			Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 			filename = Console.ReadLine ();
 			if (String.IsNullOrEmpty (filename)) {
 				Console.ForegroundColor = ConsoleColor.White;
@@ -144,7 +84,7 @@ namespace PandaCat {
 					textBox.CustomBox1 ("If this is Elijah, it is an ID10T error. let's try this again.");
 					textBox.CustomBox3 ("Everyone else using PandaCat (#LowlyAssistant):", "This error appears when nothing has been entered. Type something, ", "and you can move forward.");
 
-					Console.Write (text[4][3] + text[0][2] + ">> ");
+					Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 					filename = Console.ReadLine ();
 
 					continue;
@@ -162,14 +102,14 @@ namespace PandaCat {
 			}
 
 			using (StreamWriter write = File.AppendText (file + ".c")) {
-				write.WriteLine ("#include" + text[4][3]);
+				write.WriteLine ("#include" + Text.text[4][3]);
 			}
 
 			PandaCat.Colors.userChoice converter = new PandaCat.Colors.userChoice();
 			converter.choice ();
 
-			//Console.WriteLine (text[4][3] + "Press ENTER key to exit");
-			Console.Write (text[4][3] + text[0][2] + ">> ");
+			//Console.WriteLine (Text.text[4][3] + "Press ENTER key to exit");
+			Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 			Console.ReadLine ();
 
 			LineTo lineTo = new LineTo ();

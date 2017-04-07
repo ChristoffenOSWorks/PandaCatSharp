@@ -43,6 +43,7 @@
     <Compile Include="EmptyException.cs" />
     <Compile Include="ToRGB.cs" />
     <Compile Include="ToCairo.cs" />
+    <Compile Include="Text.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

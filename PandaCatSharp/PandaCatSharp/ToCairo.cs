@@ -36,9 +36,9 @@ namespace PandaCat {
 				textBox.CustomBox1 ("Writing to: " + file + ".c");
 				textBox.CustomBox2 (rgb1, rgb2);
 
-				Console.Write (text[0][2]);
-				textBox.CustomBox2 (Step1, text[2][1]);
-				Console.Write (text[4][3] + text[0][2] + ">> ");
+				Console.Write (Text.text[0][2]);
+				textBox.CustomBox2 (Step1, Text.text[2][1]);
+				Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 				String r = Console.ReadLine ();
 				r0 = r;
 				r1 = float.Parse (r0);
@@ -54,9 +54,9 @@ namespace PandaCat {
 			}
 
 			public void toCairo_G() {
-				Console.Write (text[0][2]);
-				textBox.CustomBox2 (Step2, text[2][2]);
-				Console.Write (text[4][3] + text[0][2] + ">> ");
+				Console.Write (Text.text[0][2]);
+				textBox.CustomBox2 (Step2, Text.text[2][2]);
+				Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 				String g = Console.ReadLine ();
 				g0 = g;
 				g1 = float.Parse (g0);
@@ -73,16 +73,16 @@ namespace PandaCat {
 			}
 
 			public void toCairo_B() {
-				Console.Write (text[0][2]);
-				textBox.CustomBox2 (Step3, text[2][3]);
-				Console.Write (text[4][3] + text[0][2] + ">> ");
+				Console.Write (Text.text[0][2]);
+				textBox.CustomBox2 (Step3, Text.text[2][3]);
+				Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 				String b = Console.ReadLine ();
 				b0 = b;
 				b1 = float.Parse (b0);
 				b2 = b1 / 255;
 				b3 = Math.Round (b2, 2); 
 				b4 = b3.ToString ();
-				Console.WriteLine (text[4][3]);
+				Console.WriteLine (Text.text[4][3]);
 
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.DarkCyan;
@@ -92,7 +92,7 @@ namespace PandaCat {
 				textBox.CustomBox2 (Step2C, yourAnswer + g0);
 				textBox.CustomBox2 (Step3C, yourAnswer + b0);
 
-				Console.Write (text[4][3] + text[0][2] + "Press ENTER to see results! >> ");
+				Console.Write (Text.text[4][3] + Text.text[0][2] + "Press ENTER to see results! >> ");
 				Console.ReadLine ();	
 			}
 
@@ -106,10 +106,10 @@ namespace PandaCat {
 
 				using (StreamWriter write2 = File.AppendText(file + ".c")) 
 				{
-					write2.WriteLine(setSourceRGBAStart + r4 + text[4][1] + g4 + text[4][1] + b4 + toCairoEnd + text[4][3]);
+					write2.WriteLine(setSourceRGBAStart + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4 + toCairoEnd + Text.text[4][3]);
 				}	
 
-				textBox.CustomBox3 (result1, setSourceRGBAStart + r4 + text[4][1] + g4 + text[4][1] + b4 + toCairoEnd, exit);
+				textBox.CustomBox3 (result1, setSourceRGBAStart + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4 + toCairoEnd, exit);
 			}      
 		}
 	}

@@ -12,8 +12,8 @@ namespace PandaCat {
 			PandaCat.Colors.Cairo toCairo = new PandaCat.Colors.Cairo();
 
 			public void choice() {
-				textBox.CustomBox3 (text[1][0], text[1][1], text[1][2]);
-				Console.Write (text[4][3] + text[4][3] + text[0][2] + text[4][0]);
+				textBox.CustomBox3 (Text.text[1][0], Text.text[1][1], Text.text[1][2]);
+				Console.Write (Text.text[4][3] + Text.text[4][3] + Text.text[0][2] + Text.text[4][0]);
 				try {
 					String choice = Console.ReadLine ();
 					if (choice == "cairo") {
