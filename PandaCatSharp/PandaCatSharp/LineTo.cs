@@ -20,7 +20,7 @@ namespace PandaCat {
 			Console.BackgroundColor = ConsoleColor.Red;
 			Console.Clear ();
 			textBox.CustomBox1("Enter number of points to plot");
-			Console.Write (newline + spaces[2] + ">> ");
+			Console.Write (text[4][3] + text[0][2] + ">> ");
 
 			String loop = Console.ReadLine();
 			String loop1 = loop;
@@ -37,7 +37,7 @@ namespace PandaCat {
 
 				textBox.CustomBox2 ("Step " + step_io.ToString() + " - In Progress!", xval);
 				step_io += 1;
-				Console.Write (newline + spaces[2] + ">> ");
+				Console.Write (text[4][3] + text[0][2] + text[4][0]);
 				String x = Console.ReadLine ();
 				x1 = x;
 				x2 = float.Parse (x1);
@@ -52,7 +52,7 @@ namespace PandaCat {
 
 				textBox.CustomBox2 ("Step " + step_io.ToString() + " - In Progress!", yval);
 				step_io += 1;
-				Console.Write (newline + spaces[2] + ">> ");
+				Console.Write (text[4][3] + text[0][2] + text[4][0]);
 				String y = Console.ReadLine ();
 				y1 = y;
 				y2 = float.Parse (y1);
@@ -77,16 +77,16 @@ namespace PandaCat {
 				exitAt += 1;
 				if (exitAt < loop4) {
 					textBox.CustomBox1 ("Press ENTER to continue.");
-					Console.Write (newline + spaces[2] + ">> ");
+					Console.Write (text[4][3] + text[0][2] + text[4][0]);
 					Console.ReadLine ();
 				} else {
 					textBox.CustomBox1 ("Press ENTER to exit.");
-					Console.Write (newline + spaces[2] + ">> ");
+					Console.Write (text[4][3] + text[0][2] + text[4][0]);
 					Console.ReadLine ();
 				}
 
 				using (StreamWriter write = File.AppendText (file + ".c")) {
-					write.WriteLine ("cairo_line_to(cr, " + x3 + end + y3 + ");");
+					write.WriteLine ("cairo_line_to(cr, " + x3 + text[4][1] + y3 + ");");
 				}
 
 				loop2 -= 1;

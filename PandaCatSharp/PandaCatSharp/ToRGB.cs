@@ -64,8 +64,8 @@ namespace PandaCat {
 				textBox.CustomBox1("Writing to: " + file + ".c");
 				textBox.CustomBox2 (rgb1, rgb2);
 
-				textBox.CustomBox2 (Step1, convertRGB[1]);
-				Console.Write (newline + spaces[2] + ">> ");
+				textBox.CustomBox2 (Step1, text[2][1]);
+				Console.Write (text[4][3] + text[0][2] + ">> ");
 
 				toRGB_R_set ();
 
@@ -77,9 +77,9 @@ namespace PandaCat {
 			}
 
 			public void toRGB_G () {
-				Console.WriteLine (spaces[2]);
-				textBox.CustomBox2 (Step2, convertRGB[2]);
-				Console.Write (newline + spaces[2] + ">> ");
+				Console.WriteLine (text[0][2]);
+				textBox.CustomBox2 (Step2, text[2][2]);
+				Console.Write (text[4][3] + text[0][2] + ">> ");
 
 				toRGB_G_set ();
 
@@ -92,9 +92,9 @@ namespace PandaCat {
 			}
 
 			public void toRGB_B() {
-				Console.WriteLine (spaces[2]);
-				textBox.CustomBox2 (Step3, convertRGB[3]);
-				Console.Write (newline + spaces[2] + ">> ");
+				Console.WriteLine (text[0][2]);
+				textBox.CustomBox2 (Step3, text[2][3]);
+				Console.Write (text[4][3] + text[0][2] + ">> ");
 				b = Console.ReadLine ();
 				b0 = b;
 				b1 = float.Parse (b0);
@@ -118,7 +118,7 @@ namespace PandaCat {
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.DarkMagenta;
 				Console.Clear ();
-				textBox.CustomBox3 (result2, before + r4 + end + g4 + end + b4, exit);
+				textBox.CustomBox3 (result2, before + r4 + text[4][1] + g4 + text[4][1] + b4, exit);
 			}
 		}
 	}
