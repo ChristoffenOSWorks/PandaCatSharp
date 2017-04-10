@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using PandaCat;
 using PandaCat.Colors;
 
@@ -8,9 +10,9 @@ namespace PandaCat {
 			public TextBoxes textBox = new TextBoxes();
 			public StrLenFind spacer = new StrLenFind ();
 
-			private String r;
-			private String g;
-			private String b;
+//			private String r;
+//			private string g;
+//			private String b;
 
 			private String r0;
 			public float r1;
@@ -29,19 +31,22 @@ namespace PandaCat {
 			private float b2;
 			private double b3;
 			private String b4;
+			public String[] rgb = new String[3]; 
 
 			public void toRGB_R_set() {
-				r = Console.ReadLine();
-				r0 = r;
-				r1 = float.Parse(r0);
+				rgb[0] = Console.ReadLine ();
+				r0 = rgb[0];
+				r1 = float.Parse (r0);
 				r2 = r1 * 255;
 				r3 = Math.Round (r2); 
 				r4 = r3.ToString ();
+				//t.inputs.Add (r);
 			}
 
 			public void toRGB_G_set() {
-				g = Console.ReadLine ();
-				g0 = g;
+				rgb[1] = Console.ReadLine();
+				g0 = rgb[1];
+				//t.inputs.Add (g);
 				g1 = float.Parse (g0);
 				g2 = g1 * 255;
 				g3 = Math.Round (g2); 
@@ -49,8 +54,9 @@ namespace PandaCat {
 			}
 
 			public void toRGB_B_set() {
-				b = Console.ReadLine ();
-				b0 = b;
+				rgb[2] = Console.ReadLine ();
+				b0 = rgb[2];
+				//t.inputs.Add (b);
 				b1 = float.Parse (b0);
 				b2 = b1 * 255;
 				b3 = Math.Round (b2); 
@@ -64,7 +70,7 @@ namespace PandaCat {
 				textBox.CustomBox1("Writing to: " + file + ".c");
 				textBox.CustomBox2 (rgb1, rgb2);
 
-				textBox.CustomBox2 (Step1, Text.text[2][1]);
+				textBox.CustomBox2 (Text.text[5][3], Text.text[2][1]);
 				Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 
 				toRGB_R_set ();
@@ -73,12 +79,12 @@ namespace PandaCat {
 				Console.BackgroundColor = ConsoleColor.DarkCyan;
 				Console.Clear ();
 				textBox.CustomBox2 (rgb1, rgb2);
-				textBox.CustomBox2 (Step1C, yourAnswer + r0);
+				textBox.CustomBox2 (Text.text[5][0], yourAnswer + r0);
 			}
 
 			public void toRGB_G () {
 				Console.WriteLine (Text.text[0][2]);
-				textBox.CustomBox2 (Step2, Text.text[2][2]);
+				textBox.CustomBox2 (Text.text[5][4], Text.text[2][2]);
 				Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 
 				toRGB_G_set ();
@@ -87,28 +93,37 @@ namespace PandaCat {
 				Console.BackgroundColor = ConsoleColor.DarkCyan;
 				Console.Clear ();
 				textBox.CustomBox2 (rgb1, rgb2);
-				textBox.CustomBox2 (Step1C, yourAnswer + r0);
-				textBox.CustomBox2 (Step2C, yourAnswer + g0);
+				textBox.CustomBox2 (Text.text[5][0], yourAnswer + r0);
+				textBox.CustomBox2 (Text.text[5][1], yourAnswer + g0);
 			}
 
 			public void toRGB_B() {
 				Console.WriteLine (Text.text[0][2]);
-				textBox.CustomBox2 (Step3, Text.text[2][3]);
+				textBox.CustomBox2 (Text.text[5][5], Text.text[2][3]);
 				Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
-				b = Console.ReadLine ();
-				b0 = b;
-				b1 = float.Parse (b0);
-				b2 = b1 * 255;
-				b3 = Math.Round (b2); 
-				b4 = b3.ToString ();
+	
+				toRGB_B_set ();
 
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.DarkCyan;
 				Console.Clear ();
 				textBox.CustomBox2 (rgb1, rgb2);
-				textBox.CustomBox2 (Step1C, yourAnswer + r0);
-				textBox.CustomBox2 (Step2C, yourAnswer + g0);
-				textBox.CustomBox2 (Step3C, yourAnswer + b0);
+				textBox.CustomBox2 (Text.text[5][0], yourAnswer + r0);
+				textBox.CustomBox2 (Text.text[5][1], yourAnswer + g0);
+				textBox.CustomBox2 (Text.text[5][2], yourAnswer + b0);
+
+				Console.Write (Text.text[4][3] + Text.text[0][2] + "Press ENTER to see results! >> ");
+				Console.ReadLine ();	
+			}
+				
+			public String line;
+
+			private void history() {
+				foreach (String value in t.inputs) {	
+					//Console.Write (t.inputs.IndexOf(value));
+					line = t.inputs.IndexOf(value) + Text.text[3][10] + value;
+					textBox.CustomBox1 (line);
+				}
 			}
 
 			public void toRGB() {
@@ -118,7 +133,14 @@ namespace PandaCat {
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.DarkMagenta;
 				Console.Clear ();
-				textBox.CustomBox3 (result2, before + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4, exit);
+				textBox.CustomBox3 (result2, Text.text[2][4] + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4, exit);
+//				Colors.userChoice uch = new userChoice ();
+				t.inputs.Add(file);
+				t.inputs.Add(Colors.userChoice.choice1);
+				t.inputs.AddRange (rgb);
+				history ();
+
+				Console.Write (Text.text[4][3]);
 			}
 		}
 	}

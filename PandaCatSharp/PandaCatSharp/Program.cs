@@ -6,10 +6,7 @@ namespace PandaCat {
 	public class Tabby {
 		public static String filename;
 		public Text t = new Text ();
-		public String before = "Before Cairo, the original RGB values are: "; 
-//		public String end = ", ";
-		public String quote = "\"";
-
+//		public String Text.text[2][4] = "Text.text[2][4] Cairo, the original RGB values are: "; 
 		public String setSourceRGBAStart = "cairo_set_source_rgba(cr, ";
 		public String toCairoEnd = ", 0.8);";
 		public String exit = "Press ENTER key to exit";
@@ -17,14 +14,6 @@ namespace PandaCat {
 		public static int length1;
 		public static int length2;
 		public static int length3;
-
-		public String Step1C = "Step 1 - Complete!";
-		public String Step2C = "Step 2 - Complete!";
-		public String Step3C = "Step 3 - Complete!";
-
-		public String Step1 = "Step 1 - In Progress!";
-		public String Step2 = "Step 2 - In Progress!";
-		public String Step3 = "Step 3 - In Progress!";
 
 		public String rgb1 = "This is the Cairo-RGB color converter";
 		public String rgb2 = "When you're done, hit enter to move to the next screen.";
@@ -96,6 +85,8 @@ namespace PandaCat {
 			}	
 			file = filename;
 
+			//Text t = new Text ();
+
 			if (String.IsNullOrEmpty (filename)) {
 				Console.Clear ();
 				Console.WriteLine ("FAILURE");
@@ -114,10 +105,6 @@ namespace PandaCat {
 
 			LineTo lineTo = new LineTo ();
 			lineTo.Logic ();
-		}
-
-		public void errExit() {
-			
 		}
 	}
 }

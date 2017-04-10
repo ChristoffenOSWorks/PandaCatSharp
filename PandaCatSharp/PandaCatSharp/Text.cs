@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace PandaCat {
 	
@@ -48,7 +50,8 @@ namespace PandaCat {
 				"═╝",
 				"╟",
 				"╢",
-				"─"
+				"─",
+				" ║ "
 			},
 
 			/**
@@ -59,8 +62,24 @@ namespace PandaCat {
 				", ",
 				"\"",
 				"\n"
-			}
+			},
+
+			/**
+			 * Steps and complete steps at Text.text[5][]
+			 **/
+			new String[] {
+				"Step 1 - Complete!",
+				"Step 2 - Complete!",
+				"Step 3 - Complete!",
+
+				"Step 1 - In Progress!",
+				"Step 2 - In Progress!",
+				"Step 3 - In Progress!"
+			},
 		};
+
+		public List<String> inputs = new List<String> ();
+
 	}
 }
 
