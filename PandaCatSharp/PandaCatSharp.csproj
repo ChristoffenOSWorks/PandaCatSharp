@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{53045751-34F0-4648-B2EE-5EA4AF82ABD5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PandaCat</RootNamespace>
+    <AssemblyName>PandaCatSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PandaCatSharp.xml</DocumentationFile>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType></DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile></DocumentationFile>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="sources\BoxParts.cs" />
+    <Compile Include="sources\EmptyException.cs" />
+    <Compile Include="sources\Program.cs" />
+    <Compile Include="sources\StrLenFind.cs" />
+    <Compile Include="sources\Text.cs" />
+    <Compile Include="sources\TextBoxes.cs" />
+    <Compile Include="sources\ToRGB.cs" />
+    <Compile Include="sources\ColorConverter.cs" />
+    <Compile Include="sources\LineTo.cs" />
+    <Compile Include="sources\ToCairo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PandaCatSharp.csproj" />
+    <None Include="PandaCatSharp.csproj.user" />
+    <None Include="obj\x86\Release\PandaCatSharp.csproj.FilesWrittenAbsolute.txt" />
+    <None Include="sources\colors.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
