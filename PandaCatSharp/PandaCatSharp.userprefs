@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{53045751-34F0-4648-B2EE-5EA4AF82ABD5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="sources/ToCairo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="History.cs">
     <Files>
-      <File FileName="sources/Text.cs" Line="100" Column="36" />
+      <File FileName="sources/Text.cs" Line="82" Column="44" />
       <File FileName="sources/Resolution.cs" Line="10" Column="29" />
       <File FileName="sources/Template.cs" Line="34" Column="1" />
       <File FileName="sources/LineTo.cs" Line="98" Column="1" />
       <File FileName="sources/Program.cs" Line="51" Column="72" />
-      <File FileName="sources/ToRGB.cs" Line="1" Column="1" />
-      <File FileName="sources/ToCairo.cs" Line="69" Column="25" />
+      <File FileName="sources/ToRGB.cs" Line="125" Column="32" />
+      <File FileName="sources/ToCairo.cs" Line="70" Column="1" />
+      <File FileName="History.cs" Line="5" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />

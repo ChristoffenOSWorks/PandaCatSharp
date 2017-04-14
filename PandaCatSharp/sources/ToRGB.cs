@@ -31,7 +31,7 @@ namespace PandaCat {
 			private float b2;
 			private double b3;
 			private String b4;
-			public String[] rgb = new String[3]; 
+			public static String[] rgb = new String[3]; 
 
 			public void toRGB_R_set() {
 				rgb[0] = Console.ReadLine ();
@@ -80,7 +80,6 @@ namespace PandaCat {
 				Console.Clear ();
 				textBox.CustomBox2 (Text.text[7][0], Text.text[7][1]);
 				textBox.CustomBox2 (Text.text[5][0], Text.text[8][2] + r0);
-				history();
 
 			}
 
@@ -118,15 +117,15 @@ namespace PandaCat {
 				Console.ReadLine ();	
 			}
 				
-			public String line;
+			//public String line;
 
-			private void history() {
-				foreach (String value in t.inputs) {	
-					//Console.Write (t.inputs.IndexOf(value));
-					line = t.inputs.IndexOf(value) + Text.text[3][10] + value;
-					textBox.CustomBox1 (line);
-				}
-			}
+			//private void history() {
+			//	foreach (String value in t.inputs) {	
+			//		//Console.Write (t.inputs.IndexOf(value));
+			//		line = t.inputs.IndexOf(value) + Text.text[3][10] + value;
+			//		textBox.CustomBox1 (line);
+			//	}
+			//}
 
 			public void toRGB() {
 				toRGB_R ();
@@ -137,13 +136,12 @@ namespace PandaCat {
 				Console.Clear ();
 				textBox.CustomBox3 (Text.text[8][0], Text.text[2][4] + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4, Text.text[8][2]);
 //				Colors.userChoice uch = new userChoice ();
-				t.inputs.Add(file);
-				t.inputs.Add(Colors.userChoice.choice1);
-				t.inputs.AddRange (rgb);
-				history ();
+				History hist = new History();
+				hist.history2();
 
 				Console.Write (Text.text[4][3]);
 				Console.ReadLine ();
+
 			}
 		}
 	}

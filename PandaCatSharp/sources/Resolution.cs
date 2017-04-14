@@ -6,7 +6,7 @@ using System.IO;
 namespace PandaCat {
 	public class Resolution : Tabby {
 
-		public String[] hw = new String[2];
+		public static String[] hw = new String[2];
 		public void dimensions() {
 			int width;
 			int height;
@@ -35,6 +35,12 @@ namespace PandaCat {
 			using (StreamWriter w = File.AppendText(filename + ".c")) {
 				Template.LogLine(Text.text[11][6] + width + Text.text[4][1] + height + Text.text[4][4], w);
 			}
+
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.BackgroundColor = ConsoleColor.DarkMagenta;
+			Console.Clear();
+			History hist = new History();
+			hist.history1();
 		}
 	}
 }
