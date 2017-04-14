@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The main file - PandaCat
  * 
  * This file contains a ton of stuff, and needs 
@@ -18,13 +18,6 @@ namespace PandaCat {
 		public static String filename;
 		public Text t = new Text ();
 
-		/**
-		 * TODO: Add to the Text jagged array
-		 **/
-		public String setSourceRGBAStart = "cairo_set_source_rgba(cr, ";
-		public String toCairoEnd = ", 0.8);";
-		public String exit = "Press ENTER key to exit";
-
 		/** TODO: Create a new jagged array containing 
 		 * ints like these.
 		 **/
@@ -33,46 +26,13 @@ namespace PandaCat {
 		public static int length3;
 
 		/**
-		 * TODO: Add to the Text jagged array
-		 **/
-		public String rgb1 = "This is the Cairo-RGB color converter";
-		public String rgb2 = "When you're done, hit enter to move to the next screen.";
-
-		/**
-		 * TODO: Add to the Text jagged array
-		 **/
-		public String result2 = "Your values have been converted from Cairo C API to standard RGB:";
-
-		/**
-		 * TODO: Add to the Text jagged array
-		 **/
-		public String yourAnswer = "Your answer was: ";
-
-		/**
-		 * TODO: Add to the Text jagged array
-		 **/
-		public String result1 = "You can now paste the following function to a Cairo C application";
-	
-		/**
 		 * This cannot be moved outside this file. 
 		 * It contains whatever was entered in ReadLine 
 		 * for filename.
 		 **/
 		public static String file;	
 
-		/**
-		 * TODO: Add to the Text jagged array
-		 **/
-		public static String filedesc1 = "This application will write C files to the folder it is run in.";
-		public static String filedesc2 = "C files are generated here using the Cairo API, so you don't have to write them.";
-		public static String filedesc3 = "So, what would you like to name the new C file generated this run?";
-
-		/**
-		 * TODO: Add to the Text jagged array
-		 **/
-		public String ltIntro = "Now for the LineTo() generator, which also generates a Cairo C function.";
-		public String xval = "Please enter the X value to plot.";
-		public String yval = "Please enter the Y value to plat.";
+		public static LineTo lineto = new LineTo();
 
 		public static void Filename() {
 			/**
@@ -88,7 +48,7 @@ namespace PandaCat {
 			 * Creates a box with instructions for the user to 
 			 * input a filename to be generated.
 			 **/
-			textBox.CustomBox3 (filedesc1, filedesc2, filedesc3);
+			textBox.CustomBox3 (Text.text[9][0], Text.text[9][1], Text.text[9][2]);
 
 			/**
 			 * Creates (on a new line) a "terminal bell." 
@@ -188,7 +148,6 @@ namespace PandaCat {
 				String LineTo = "--LineTo";
 				if (args[0] == LineTo) {
 					Console.Write("LineTo is detected");
-					LineTo lineto = new LineTo ();
 					lineto.Logic ();
 				} else if (args[0] == "--ToRGB") {
 					Filename();
@@ -229,12 +188,19 @@ namespace PandaCat {
 
 			Filename ();
 
+			Template ctext = new Template();
+			ctext.Part1();
+
+			Resolution dimensions = new Resolution();
+			dimensions.dimensions();
+
 			PandaCat.Colors.userChoice converter = new PandaCat.Colors.userChoice();
 			converter.choice ();
 
-			//Console.WriteLine (Text.text[4][3] + "Press ENTER key to exit");
+			lineto.Logic();
 
 			Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
+
 			Console.ReadLine ();
 		}
 	}

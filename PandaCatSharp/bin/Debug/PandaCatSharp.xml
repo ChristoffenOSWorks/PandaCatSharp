@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PandaCatSharp</name>
+    </assembly>
+    <members>
+        <member name="F:PandaCat.Tabby.setSourceRGBAStart">
+            
+            
+            		 * TODO: Add to the Text jagged array
+            		 *</member>
+        <member name="F:PandaCat.Tabby.length1">
+            
+             TODO: Create a new jagged array containing 
+            		 * ints like these.
+            		 *</member>
+        <member name="F:PandaCat.Tabby.rgb1">
+            
+            
+            		 * TODO: Add to the Text jagged array
+            		 *</member>
+        <member name="F:PandaCat.Tabby.result2">
+            
+            
+            		 * TODO: Add to the Text jagged array
+            		 *</member>
+        <member name="F:PandaCat.Tabby.yourAnswer">
+            
+            
+            		 * TODO: Add to the Text jagged array
+            		 *</member>
+        <member name="F:PandaCat.Tabby.result1">
+            
+            
+            		 * TODO: Add to the Text jagged array
+            		 *</member>
+        <member name="F:PandaCat.Tabby.file">
+            
+            
+            		 * This cannot be moved outside this file. 
+            		 * It contains whatever was entered in ReadLine 
+            		 * for filename.
+            		 *</member>
+        <member name="F:PandaCat.Tabby.filedesc1">
+            
+            
+            		 * TODO: Add to the Text jagged array
+            		 *</member>
+        <member name="F:PandaCat.Tabby.ltIntro">
+            
+            
+            		 * TODO: Add to the Text jagged array
+            		 *</member>
+        <member name="M:PandaCat.Tabby.Main(System.String[])">
+            
+            
+            		 * Main function. All command line parameters go here.
+            		 * 
+            		 * TODO: Adding breakpoints for individual pieces of 
+            		 * program soon.
+            		 *</member>
+    </members>
+</doc>

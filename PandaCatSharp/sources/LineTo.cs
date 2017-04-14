@@ -33,9 +33,9 @@ namespace PandaCat {
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.Red;
 				Console.Clear ();
-				textBox.CustomBox1 (ltIntro);
+				textBox.CustomBox1 (Text.text[10][0]);
 
-				textBox.CustomBox2 ("Step " + step_io.ToString() + " - In Progress!", xval);
+				textBox.CustomBox2 ("Step " + step_io.ToString() + " - In Progress!", Text.text[10][1]);
 				step_io += 1;
 				Console.Write (Text.text[4][3] + Text.text[0][2] + Text.text[4][0]);
 				String x = Console.ReadLine ();
@@ -46,11 +46,11 @@ namespace PandaCat {
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.Red;
 				Console.Clear ();
-				textBox.CustomBox1 (ltIntro);
-				textBox.CustomBox2 ("Step " + step_progress.ToString() + " - Complete!", yourAnswer + x3);
+				textBox.CustomBox1 (Text.text[10][0]);
+				textBox.CustomBox2 ("Step " + step_progress.ToString() + " - Complete!", Text.text[8][2] + x3);
 				step_progress += 1;
 
-				textBox.CustomBox2 ("Step " + step_io.ToString() + " - In Progress!", yval);
+				textBox.CustomBox2 ("Step " + step_io.ToString() + " - In Progress!", Text.text[10][2]);
 				step_io += 1;
 				Console.Write (Text.text[4][3] + Text.text[0][2] + Text.text[4][0]);
 				String y = Console.ReadLine ();
@@ -63,11 +63,11 @@ namespace PandaCat {
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.Red;
 				Console.Clear ();
-				textBox.CustomBox1 (ltIntro);
+				textBox.CustomBox1 (Text.text[10][0]);
 				int back1 = step_progress;
 				int back2 = back1 - 1;
-				textBox.CustomBox2 ("Step " + back2.ToString() + " - Complete!", yourAnswer + x3);
-				textBox.CustomBox2 ("Step " + step_progress.ToString() + " - Complete!", yourAnswer + y3);
+				textBox.CustomBox2 ("Step " + back2.ToString() + " - Complete!", Text.text[8][2] + x3);
+				textBox.CustomBox2 ("Step " + step_progress.ToString() + " - Complete!", Text.text[8][2] + y3);
 				step_progress += 1;
 
 				int loop3 = loop2;

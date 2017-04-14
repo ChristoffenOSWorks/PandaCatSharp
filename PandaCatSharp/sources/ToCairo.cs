@@ -66,7 +66,7 @@ namespace PandaCat {
 				Console.BackgroundColor = ConsoleColor.DarkCyan;
 				Console.Clear ();
 				textBox.CustomBox1 ("Writing to: " + file + ".c");
-				textBox.CustomBox2 (rgb1, rgb2);
+				textBox.CustomBox2 (Text.text[7][0], Text.text[7][1]);
 
 				Console.Write (Text.text[0][2]);
 				textBox.CustomBox2 (Text.text[5][3], Text.text[2][1]);
@@ -77,8 +77,8 @@ namespace PandaCat {
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.DarkCyan;
 				Console.Clear ();
-				textBox.CustomBox2 (rgb1, rgb2);
-				textBox.CustomBox2 (Text.text[5][0], yourAnswer + r0);
+				textBox.CustomBox2 (Text.text[7][0], Text.text[7][1]);
+				textBox.CustomBox2 (Text.text[5][0], Text.text[8][2] + r0);
 			}
 
 			public void toCairo_G() {
@@ -91,9 +91,9 @@ namespace PandaCat {
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.DarkCyan;
 				Console.Clear ();
-				textBox.CustomBox2 (rgb1, rgb2);
-				textBox.CustomBox2 (Text.text[5][0], yourAnswer + r0);
-				textBox.CustomBox2 (Text.text[5][1], yourAnswer + g0);
+				textBox.CustomBox2 (Text.text[7][0], Text.text[7][1]);
+				textBox.CustomBox2 (Text.text[5][0], Text.text[8][2] + r0);
+				textBox.CustomBox2 (Text.text[5][1], Text.text[8][2] + g0);
 			}
 
 			public void toCairo_B() {
@@ -106,10 +106,10 @@ namespace PandaCat {
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.DarkCyan;
 				Console.Clear ();
-				textBox.CustomBox2 (rgb1, rgb2);
-				textBox.CustomBox2 (Text.text[5][0], yourAnswer + r0);
-				textBox.CustomBox2 (Text.text[5][1], yourAnswer + g0);
-				textBox.CustomBox2 (Text.text[5][2], yourAnswer + b0);
+				textBox.CustomBox2 (Text.text[7][0], Text.text[7][1]);
+				textBox.CustomBox2 (Text.text[5][0], Text.text[8][2] + r0);
+				textBox.CustomBox2 (Text.text[5][1], Text.text[8][2] + g0);
+				textBox.CustomBox2 (Text.text[5][2], Text.text[8][2] + b0);
 
 				Console.Write (Text.text[4][3] + Text.text[0][2] + "Press ENTER to see results! >> ");
 				Console.ReadLine ();	
@@ -125,10 +125,10 @@ namespace PandaCat {
 
 				using (StreamWriter write2 = File.AppendText(file + ".c")) 
 				{
-					write2.WriteLine(setSourceRGBAStart + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4 + toCairoEnd + Text.text[4][3]);
+					write2.WriteLine(Text.text[6][0] + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4 + Text.text[6][1] + Text.text[4][3]);
 				}	
 
-				textBox.CustomBox3 (result1, setSourceRGBAStart + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4 + toCairoEnd, exit);
+				textBox.CustomBox3 (Text.text[8][1], Text.text[6][0] + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4 + Text.text[6][1], Text.text[6][2]);
 			}      
 		}
 	}
