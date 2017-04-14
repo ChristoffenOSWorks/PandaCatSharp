@@ -49,7 +49,7 @@
     <Compile Include="sources\ToCairo.cs" />
     <Compile Include="sources\Template.cs" />
     <Compile Include="sources\Resolution.cs" />
-    <Compile Include="History.cs" />
+    <Compile Include="sources\History.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PandaCatSharp.csproj" />
