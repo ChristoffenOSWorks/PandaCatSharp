@@ -37,30 +37,50 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="sources\BoxParts.cs" />
-    <Compile Include="sources\EmptyException.cs" />
-    <Compile Include="sources\Program.cs" />
-    <Compile Include="sources\StrLenFind.cs" />
-    <Compile Include="sources\Text.cs" />
-    <Compile Include="sources\TextBoxes.cs" />
-    <Compile Include="sources\ToRGB.cs" />
-    <Compile Include="sources\ColorConverter.cs" />
-    <Compile Include="sources\LineTo.cs" />
-    <Compile Include="sources\ToCairo.cs" />
-    <Compile Include="sources\Template.cs" />
-    <Compile Include="sources\Resolution.cs" />
-    <Compile Include="sources\History.cs" />
+    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PandaCatSharp.csproj" />
-    <None Include="PandaCatSharp.csproj.user" />
     <None Include="obj\x86\Release\PandaCatSharp.csproj.FilesWrittenAbsolute.txt" />
-    <None Include="sources\colors.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
     <Folder Include="bin\Debug\" />
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="PCText\PCText.csproj">
+      <Project>{086D4F99-ABA7-468A-B608-69A0FF64FD2A}</Project>
+      <Name>PCSText</Name>
+    </ProjectReference>
+    <ProjectReference Include="PCColors\PCColors.csproj">
+      <Project>{126C5CD7-16ED-41CE-828F-3513F647E29F}</Project>
+      <Name>PCSColors</Name>
+    </ProjectReference>
+    <ProjectReference Include="PCTextBoxes\PCTextBoxes.csproj">
+      <Project>{127EF997-7692-4F45-88FB-73910217E536}</Project>
+      <Name>PCSTextBoxes</Name>
+    </ProjectReference>
+    <ProjectReference Include="PCFiles\PCFiles.csproj">
+      <Project>{A4EAC631-24EA-4948-A00E-C20D63F6CEBA}</Project>
+      <Name>PCSFiles</Name>
+    </ProjectReference>
+    <ProjectReference Include="PCHistory\PCHistory.csproj">
+      <Project>{9730CC9B-1083-4176-BCA2-7412116862DE}</Project>
+      <Name>PCSHistory</Name>
+    </ProjectReference>
+    <ProjectReference Include="PCResolution\PCResolution.csproj">
+      <Project>{B7120A38-C397-453D-A6EB-7D5BAD0944BA}</Project>
+      <Name>PCSResolution</Name>
+    </ProjectReference>
+    <ProjectReference Include="PCTemplate\PCTemplate.csproj">
+      <Project>{462E1FE3-24FA-4032-BC48-69C3A7854DC0}</Project>
+      <Name>PCSTemplate</Name>
+    </ProjectReference>
+    <ProjectReference Include="PCLineTo\PCLineTo.csproj">
+      <Project>{885E0C71-D301-4253-AC47-DF61536AA7AD}</Project>
+      <Name>PCSLineTo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

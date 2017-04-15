@@ -1,3 +1,11 @@
 /home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/obj/x86/Release/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs
 /home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PandaCatSharp.exe
 /home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/obj/x86/Release/PandaCatSharp.exe
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCText.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCColors.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCTextBoxes.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCFiles.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCHistory.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCResolution.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCTemplate.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCLineTo.dll
