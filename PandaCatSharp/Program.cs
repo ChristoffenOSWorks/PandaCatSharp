@@ -16,12 +16,8 @@ using System.IO;
 namespace PandaCat {
 	public class Tabby {
 		public Text t = new Text ();
-
 		public static LineTo lineto = new LineTo();
 
-		/**
-		 * Main function. All command line parameters go here.
-		 **/
 		public static void Main (string[] args) {
 
 			try {
@@ -51,39 +47,7 @@ namespace PandaCat {
 				Console.Write ("Something wrong?");
 			}
 
-			/**
-			 * The following block tells the program
-			 * to set the text in the text color to white,
-			 * and subsequently set the background to a 
-			 * dark cyan-ish color.
-			 **/
-
-			Console.ForegroundColor = ConsoleColor.White;
-			Console.BackgroundColor = ConsoleColor.DarkCyan;
-			Console.Clear ();
-
-			using (StreamWriter write = File.AppendText (Files.file + ".c")) {
-				write.WriteLine ("#include" + Text.text[4][3]);
-			}
-
-			Files.Filename ();
-
-			Template ctext = new Template();
-			ctext.Part1();
-
-			Resolution dimensions = new Resolution();
-			dimensions.dimensions();
-			History hist = new History();
-			hist.history1();
-
-			PandaCat.Colors.userChoice converter = new PandaCat.Colors.userChoice();
-			converter.choice ();
-
-			lineto.Logic();
-
-			Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
-
-			Console.ReadLine ();
+			Cadence.Order();
 		}
 	}
 }

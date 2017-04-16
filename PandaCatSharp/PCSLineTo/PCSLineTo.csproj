@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{885E0C71-D301-4253-AC47-DF61536AA7AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PCLineTo</RootNamespace>
+    <AssemblyName>PCLineTo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Release</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LineTo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PCSLineTo.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PCSText\PCSText.csproj">
+      <Project>{086D4F99-ABA7-468A-B608-69A0FF64FD2A}</Project>
+      <Name>PCSText</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCSTextBoxes\PCSTextBoxes.csproj">
+      <Project>{127EF997-7692-4F45-88FB-73910217E536}</Project>
+      <Name>PCSTextBoxes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCSFiles\PCSFiles.csproj">
+      <Project>{A4EAC631-24EA-4948-A00E-C20D63F6CEBA}</Project>
+      <Name>PCSFiles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

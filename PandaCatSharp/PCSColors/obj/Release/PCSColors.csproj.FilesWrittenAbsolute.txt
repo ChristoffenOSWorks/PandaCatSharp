@@ -1,0 +1,3 @@
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSColors/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCColors.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSColors/obj/Release/PCColors.dll

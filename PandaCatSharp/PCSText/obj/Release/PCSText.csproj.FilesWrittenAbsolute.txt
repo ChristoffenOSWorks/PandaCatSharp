@@ -1,0 +1,3 @@
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSText/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCText.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSText/obj/Release/PCText.dll

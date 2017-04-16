@@ -1,0 +1,4 @@
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSFiles/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSFiles/bin/Release/PCFiles.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSFiles/obj/Release/PCFiles.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCFiles.dll

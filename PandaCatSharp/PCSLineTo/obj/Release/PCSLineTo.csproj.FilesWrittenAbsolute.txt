@@ -1,0 +1,7 @@
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSLineTo/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSLineTo/bin/Release/PCLineTo.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSLineTo/obj/Release/PCLineTo.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSLineTo/bin/Release/PCText.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSLineTo/bin/Release/PCTextBoxes.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSLineTo/bin/Release/PCFiles.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCLineTo.dll
