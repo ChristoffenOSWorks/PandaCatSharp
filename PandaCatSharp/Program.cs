@@ -17,8 +17,23 @@ namespace PandaCat {
 	public class Tabby {
 		public Text t = new Text ();
 		public static LineTo lineto = new LineTo();
+		public static int i = 1;
 
 		public static void Main (string[] args) {
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.BackgroundColor = ConsoleColor.DarkCyan;
+			Console.Clear ();
+
+			ImageNameLoop image = new ImageNameLoop();
+			image.ImageLoop();
+
+			while (i <= image.imgs) {
+				Cadence.Order();
+				i++;
+			}
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.BackgroundColor = ConsoleColor.DarkCyan;
+			Console.Clear ();
 
 			try {
 				String LineTo = "--LineTo";
@@ -43,11 +58,7 @@ namespace PandaCat {
 
 			} catch {
 				Console.Write ("Nothing entered");
-			} finally {
-				Console.Write ("Something wrong?");
 			}
-
-			Cadence.Order();
 		}
 	}
 }

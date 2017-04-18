@@ -1,9 +1,0 @@
-/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSResolution/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSResolution/bin/Release/PCResolution.dll
-/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSResolution/obj/Release/PCResolution.dll
-/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSResolution/bin/Release/PCColors.dll
-/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSResolution/bin/Release/PCTemplate.dll
-/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSResolution/bin/Release/PCTextBoxes.dll
-/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSResolution/bin/Release/PCFiles.dll
-/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSResolution/bin/Release/PCText.dll
-/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCResolution.dll

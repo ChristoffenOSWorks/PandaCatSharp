@@ -90,6 +90,10 @@
       <Name>PCSTextBoxes</Name>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="PCSImageNameLoop\PCSImageNameLoop.csproj">
+      <Project>{FE53D059-D19C-49A1-9137-46EDAE66F183}</Project>
+      <Name>PCSImageNameLoop</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

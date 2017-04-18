@@ -1,18 +1,30 @@
 ﻿<Properties StartupConfiguration="{53045751-34F0-4648-B2EE-5EA4AF82ABD5}|Default" VersionControlDisabled="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PCSHistory/History.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cadence.cs">
     <Files>
-      <File FileName="Program.cs" Line="48" Column="2" />
-      <File FileName="PCSResolution/Resolution.cs" Line="18" Column="20" />
-      <File FileName="PCSTemplate/Template.cs" Line="24" Column="3" />
-      <File FileName="Cadence.cs" Line="37" Column="17" />
-      <File FileName="PCSText/Text.cs" Line="136" Column="1" />
-      <File FileName="PCSLineTo/LineTo.cs" Line="21" Column="12" />
-      <File FileName="PCSColors/ToCairo.cs" Line="34" Column="44" />
-      <File FileName="PCSColors/ColorConverter.cs" Line="22" Column="20" />
-      <File FileName="PCSFiles/Files.cs" Line="116" Column="1" />
-      <File FileName="PCSColors/ToRGB.cs" Line="31" Column="4" />
-      <File FileName="PCSHistory/History.cs" Line="43" Column="4" />
+      <File FileName="Program.cs" Line="53" Column="1" />
+      <File FileName="PCSColors/ToCairo.cs" Line="97" Column="4" />
+      <File FileName="PCSImageNameLoop/ImageNameLoop.cs" Line="24" Column="39" />
+      <File FileName="PCSText/Text.cs" Line="143" Column="16" />
+      <File FileName="PCSTemplate/Template.cs" Line="27" Column="75" />
+      <File FileName="Cadence.cs" Line="55" Column="4" />
+      <File FileName="PCSColors/ColorConverter.cs" Line="12" Column="17" NotebookId="1" />
+      <File FileName="PCSFiles/Files.cs" Line="29" Column="1" NotebookId="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PandaCatSharp" expanded="True">
+            <Node name="PandaCatSharp" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Cadence.cs" selected="True" />
+            </Node>
+            <Node name="PCSImageNameLoop" expanded="True" />
+            <Node name="PCSTemplate" expanded="True" />
+            <Node name="PCSText" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

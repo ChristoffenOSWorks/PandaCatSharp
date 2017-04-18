@@ -125,7 +125,7 @@ namespace PandaCat {
 
 			using (StreamWriter write2 = File.AppendText(Files.file + ".c")) 
 			{
-				write2.Write(Text.text[4][3] + Text.text[0][0] + Text.text[6][0] + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4 + Text.text[6][1]);
+				write2.Write(Text.text[0][0] + Text.text[6][0] + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4 + Text.text[6][1]);
 			}	
 			textBox.CustomBox3 (Text.text[8][1], Text.text[6][0] + r4 + Text.text[4][1] + g4 + Text.text[4][1] + b4 + Text.text[6][1], Text.text[6][2]);
 

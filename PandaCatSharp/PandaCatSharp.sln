@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCSText", "PCSText\PCSText.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCSTextBoxes", "PCSTextBoxes\PCSTextBoxes.csproj", "{127EF997-7692-4F45-88FB-73910217E536}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCSImageNameLoop", "PCSImageNameLoop\PCSImageNameLoop.csproj", "{FE53D059-D19C-49A1-9137-46EDAE66F183}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -61,6 +63,10 @@ Global
 		{127EF997-7692-4F45-88FB-73910217E536}.Debug|x86.Build.0 = Debug|Any CPU
 		{127EF997-7692-4F45-88FB-73910217E536}.Release|x86.ActiveCfg = Release|Any CPU
 		{127EF997-7692-4F45-88FB-73910217E536}.Release|x86.Build.0 = Release|Any CPU
+		{FE53D059-D19C-49A1-9137-46EDAE66F183}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FE53D059-D19C-49A1-9137-46EDAE66F183}.Debug|x86.Build.0 = Debug|Any CPU
+		{FE53D059-D19C-49A1-9137-46EDAE66F183}.Release|x86.ActiveCfg = Release|Any CPU
+		{FE53D059-D19C-49A1-9137-46EDAE66F183}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0

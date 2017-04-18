@@ -9,7 +9,10 @@ namespace PandaCat {
 		public static String file;	
 
 		public static void Filename() {
-			
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.BackgroundColor = ConsoleColor.DarkCyan;
+			Console.Clear ();
+
 			/**
 			 * Create object "textBox." This creates a reference 
 			 * to a class TextBoxes, which contains functions 
@@ -23,7 +26,6 @@ namespace PandaCat {
 			 * Creates a box with instructions for the user to 
 			 * input a filename to be generated.
 			 **/
-			textBox.CustomBox2 (Text.text[1][0], Text.text[1][1]);
 			textBox.CustomBox3 (Text.text[9][0], Text.text[9][1], Text.text[9][2]);
 
 			/**

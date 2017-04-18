@@ -7,8 +7,8 @@ namespace PandaCat {
 		public static String[][] text = new String[][] {
 
 			/**
-				 * Spaces at t.Text.text[0][]
-				 **/
+			 * Spaces at t.Text.text[0][]
+			 **/
 			new String[] {
 				"        ",
 				"            ",
@@ -17,8 +17,8 @@ namespace PandaCat {
 			},
 
 			/**
-				 * Copyrights at t.Text.text[1][]
-				 **/
+			 * Copyrights at t.Text.text[1][]
+			 **/
 			new String[] {
 				"(c) 2017 M. Gage Morgan. All Rights Reserved. Project start date: 2/24/2017",
 				"Program to convert human-readable instructions into Cairo-readable C programs.",
@@ -26,8 +26,8 @@ namespace PandaCat {
 			},
 
 			/**
-				 * convertRGB at t.Text.text[2][]
-				 **/
+			 * convertRGB at t.Text.text[2][]
+			 **/
 			new String[] {
 				"Please enter the R, G, and B values for the outline of the image to be generated.",
 				"Enter the R value to be converted.",
@@ -37,8 +37,8 @@ namespace PandaCat {
 			},
 
 			/**
-				 * Box borders at t.Text.text[3][]
-				 **/
+			 * Box borders at t.Text.text[3][]
+			 **/
 			new String[] {
 				"═",
 				" ║",
@@ -54,8 +54,8 @@ namespace PandaCat {
 			},
 
 			/**
-				 * Punctuation for terminal at t.Text.text[4][]
-				 **/
+			 * Punctuation for terminal at t.Text.text[4][]
+			 **/
 			new String[] {
 				">> ",
 				", ",
@@ -65,8 +65,8 @@ namespace PandaCat {
 			},
 
 			/**
-				 * Steps and complete steps at Text.text[5][]
-				 **/
+			 * Steps and complete steps at Text.text[5][]
+			 **/
 			new String[] {
 				"Step 1 - Complete!",
 				"Step 2 - Complete!",
@@ -78,8 +78,8 @@ namespace PandaCat {
 			},
 
 			/**
-				 * Color RGBA functions at Text.text[6][]
-				 **/
+			 * Color RGBA functions at Text.text[6][]
+			 **/
 			new String[] {
 				"cairo_set_source_rgba(cr, ",
 				", 0.8);",
@@ -87,17 +87,17 @@ namespace PandaCat {
 			},
 
 			/**
-				 * RGB text for introduction instruction box
-				 * at Text.text[7][]
-				 **/
+			 * RGB text for introduction instruction box
+			 * at Text.text[7][]
+			 **/
 			new String[] {
 				"This is the Cairo-RGB color converter",
 				"When you're done, hit enter to move to the next screen."
 			},
 
 			/**
-				 * Result text at Text.text[8][]
-				 **/
+			 * Result text at Text.text[8][]
+			 **/
 			new String[] {
 				"Your values have been converted from Cairo C API to standard RGB:",
 				"You can now paste the following function to a Cairo C application",
@@ -105,8 +105,8 @@ namespace PandaCat {
 			},
 
 			/**
-				 * Text for entering a file and why at Text.text[9][]
-				 **/
+			 * Text for entering a file and why at Text.text[9][]
+			 **/
 			new String[] {
 				"This application will write C files to the folder it is run in.",
 				"C files are generated here using the Cairo API, so you don't have to write them.",
@@ -114,8 +114,8 @@ namespace PandaCat {
 			},
 
 			/**
-				 * LineTo instructions are at Text.text[10][]
-				 **/
+			 * LineTo instructions are at Text.text[10][]
+			 **/
 			new String[] {
 				"Now for the LineTo() generator, which also generates a Cairo C function.",
 				"Please enter the X value to plot.",
@@ -123,8 +123,8 @@ namespace PandaCat {
 			},
 
 			/**
-				 * C templating stuffs go here at Text.text[11][]
-				 **/
+			 * C templating stuffs go here at Text.text[11][]
+			 **/
 			new String[] {
 				"#include \"/usr/include/cairo/cairo.h\"",
 				"int",
@@ -133,17 +133,34 @@ namespace PandaCat {
 				"cairo_surface_t *surface = ",
 				"cairo_t *cr = ",
 				"cairo_image_surface_create (CAIRO_FORMAT_ARGB32, ",
-				"cairo_create (surface);"
+				"cairo_create (surface);",
+				"cairo_close_path (cr);",
+				"cairo_fill_preserve (cr);",
+				"cairo_stroke (cr);",
+				"cairo_surface_write_to_png (surface, ",
+				"cairo_destroy (cr);",
+				"cairo_surface_destroy (surface);",
+				"return 0;",
+				"}"
 			},
 
 			/**
-				 * Dialog for Resolution at Text.text[12][]
-				 **/
+			 * Dialog for Resolution at Text.text[12][]
+			 **/
 			new String [] {
 				"This is the part where we determine image width and height.",
 				"The image outputted by cairo has dimensions dteremined here.",
 				"Enter the width of the image below.",
 				"Enter the height of the image below."
+			},
+
+			/**
+			 * Dialog for number of times to run the event cadence loop at Text.text[13][]
+			 **/
+			new String[] {
+				"Please tell me how many images you would like done",
+				"There will be a main event loop implemented to have this entire program run",
+				"x amount of times for layered images."
 			}
 		};
 
