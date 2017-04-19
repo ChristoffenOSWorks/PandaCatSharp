@@ -185,3 +185,4 @@
         cairo_line_to(cr, 12, 23);
         cairo_line_to(cr, 12, 23);
         cairo_line_to(cr, 12, 23);
+        cairo_line_to(cr, 23, 34);

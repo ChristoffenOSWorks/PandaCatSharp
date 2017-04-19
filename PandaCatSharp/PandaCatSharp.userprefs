@@ -1,13 +1,18 @@
 ﻿<Properties StartupConfiguration="{53045751-34F0-4648-B2EE-5EA4AF82ABD5}|Default" VersionControlDisabled="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PCSColors/ToCairo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PCSTextBoxes/TextBoxes.cs">
     <Files>
-      <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="PCSText/Text.cs" Line="113" Column="74" />
+      <File FileName="Program.cs" Line="20" Column="3" />
+      <File FileName="PCSText/Text.cs" Line="117" Column="9" />
       <File FileName="PCSErrorHandler/MyClass.cs" Line="1" Column="1" />
-      <File FileName="PCSLoop/CLIMethods.cs" Line="28" Column="15" />
-      <File FileName="PCSLoop/Cadence.cs" Line="1" Column="1" />
-      <File FileName="PCSColors/ToCairo.cs" Line="96" Column="4" />
-      <File FileName="PCSLoop/Loop.cs" Line="1" Column="1" />
+      <File FileName="PCSLoop/CLIMethods.cs" Line="5" Column="4" />
+      <File FileName="PCSLoop/Cadence.cs" Line="52" Column="20" />
+      <File FileName="PCSLoop/Loop.cs" Line="28" Column="1" />
+      <File FileName="PCSColors/ToCairo.cs" Line="15" Column="25" />
+      <File FileName="PCSColors/ToRGB.cs" Line="18" Column="11" />
+      <File FileName="PCSImageNameLoop/ImageNameLoop.cs" Line="22" Column="5" />
+      <File FileName="PCSResolution/Resolution.cs" Line="54" Column="1" />
+      <File FileName="PCSLineTo/LineTo.cs" Line="46" Column="5" />
+      <File FileName="PCSTextBoxes/TextBoxes.cs" Line="26" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />

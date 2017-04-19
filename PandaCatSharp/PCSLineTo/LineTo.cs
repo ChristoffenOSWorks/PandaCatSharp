@@ -7,59 +7,60 @@ namespace PandaCat {
 	public class LineTo {
 		TextBoxes textBox = new TextBoxes ();
 
-		private String x1;
 		private float x2;
 		private String x3;
 
-		private String y1;
 		private float y2;
 		private String y3;
 
-		public void Logic() {
-			Console.ForegroundColor = ConsoleColor.White;
-			Console.BackgroundColor = ConsoleColor.Red;
-			Console.Clear ();
-			textBox.CustomBox1("Enter number of points to plot");
-			Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
+		public bool loop = false;
+		public int loop1;
+		public bool x = false;
+		public bool y = false;
 
-			String loop = Console.ReadLine();
-			String loop1 = loop;
-			int loop2 = int.Parse (loop1);
+		public void Logic() {
+			while (!loop) {
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.BackgroundColor = ConsoleColor.Red;
+				Console.Clear ();
+				textBox.CustomBox1("Enter number of points to plot");
+				Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
+
+				loop = int.TryParse (Console.ReadLine(), out loop1);
+			}
 			int adder = 0;
 			int step_io = 1;
 			int step_progress = 1;
 
-			while (loop2 > adder) {
-				Console.ForegroundColor = ConsoleColor.White;
-				Console.BackgroundColor = ConsoleColor.Red;
-				Console.Clear ();
-				textBox.CustomBox1 (Text.text[10][0]);
+			while (loop1 > adder) {
+				while (!x) {
+					Console.ForegroundColor = ConsoleColor.White;
+					Console.BackgroundColor = ConsoleColor.Red;
+					Console.Clear ();
+					textBox.CustomBox1 (Text.text[10][0]);
 
-				textBox.CustomBox2 ("Step " + step_io.ToString() + " - In Progress!", Text.text[10][1]);
-				step_io += 1;
-				Console.Write (Text.text[4][3] + Text.text[0][2] + Text.text[4][0]);
-				String x = Console.ReadLine ();
-				x1 = x;
-				x2 = float.Parse (x1);
-				x3 = x2.ToString ();
+					textBox.CustomBox2 ("Step " + step_io.ToString() + " - In Progress!", Text.text[10][1]);
+					step_io += 1;
+					Console.Write (Text.text[4][3] + Text.text[0][2] + Text.text[4][0]);
+					x = float.TryParse(Console.ReadLine (), out x2);
+					x3 = x2.ToString ();
+				}
 
-				Console.ForegroundColor = ConsoleColor.White;
-				Console.BackgroundColor = ConsoleColor.Red;
-				Console.Clear ();
-				textBox.CustomBox1 (Text.text[10][0]);
-				textBox.CustomBox2 ("Step " + step_progress.ToString() + " - Complete!", Text.text[8][2] + x3);
-				step_progress += 1;
+				while (!y) {
+					Console.ForegroundColor = ConsoleColor.White;
+					Console.BackgroundColor = ConsoleColor.Red;
+					Console.Clear ();
+					textBox.CustomBox1 (Text.text[10][0]);
+					textBox.CustomBox2 ("Step " + step_progress.ToString() + " - Complete!", Text.text[8][2] + x3);
+					step_progress += 1;
 
-				textBox.CustomBox2 ("Step " + step_io.ToString() + " - In Progress!", Text.text[10][2]);
-				step_io += 1;
-				Console.Write (Text.text[4][3] + Text.text[0][2] + Text.text[4][0]);
-				String y = Console.ReadLine ();
-				y1 = y;
-				y2 = float.Parse (y1);
-				y3 = y2.ToString ();
-	//			textBox.CustomBox2 ("Step " + step_progress.ToString() + " - Complete!", yourAnswer + y3);
-	//			step_progress += 1;
-
+					textBox.CustomBox2 ("Step " + step_io.ToString() + " - In Progress!", Text.text[10][2]);
+					step_io += 1;
+					Console.Write (Text.text[4][3] + Text.text[0][2] + Text.text[4][0]);
+					y = float.TryParse(Console.ReadLine(), out y2);
+					y3 = y2.ToString ();
+				}
+	
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.BackgroundColor = ConsoleColor.Red;
 				Console.Clear ();
@@ -70,7 +71,7 @@ namespace PandaCat {
 				textBox.CustomBox2 ("Step " + step_progress.ToString() + " - Complete!", Text.text[8][2] + y3);
 				step_progress += 1;
 
-				int loop3 = loop2;
+				int loop3 = loop1;
 				int loop4 = loop3 * 2;
 
 				int exitAt = 2;
@@ -98,7 +99,7 @@ namespace PandaCat {
 					Console.ReadLine ();
 				}
 
-				loop2 -= 1;
+				loop1 -= 1;
 			}
 		}
 	}

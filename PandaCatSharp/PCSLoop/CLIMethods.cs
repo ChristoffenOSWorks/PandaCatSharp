@@ -11,8 +11,7 @@ namespace PandaCat {
 
 			ImageNameLoop image = new ImageNameLoop();
 			image.ImageLoop();
-
-			while (i <= image.imgs) {
+			while (i <= image.imgs1) {
 				Cadence.Order();
 				i++;
 			}

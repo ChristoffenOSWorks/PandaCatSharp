@@ -3,20 +3,23 @@ using System.IO;
 
 namespace PandaCat {
 	public class ImageNameLoop {
-		public int imgs;
-		private String number;
+		public bool imgs;
+		public int imgs1;
 
 		public void ImageLoop() {
-			TextBoxes textBox = new TextBoxes();
-			textBox.CustomBox2 (Text.text[1][0], Text.text[1][1]);
-			textBox.CustomBox3(Text.text[13][0], Text.text[13][1], Text.text[13][2]);
-			Console.Write(Text.text[4][3] + Text.text[0][2] + Text.text[4][0]);
-			number = Console.ReadLine();
-			imgs = int.Parse(number);
+			while (!imgs) {
+				TextBoxes textBox = new TextBoxes();
 
-			Console.ForegroundColor = ConsoleColor.White;
-			Console.BackgroundColor = ConsoleColor.DarkCyan;
-			Console.Clear ();
+				textBox.CustomBox2 (Text.text[1][0], Text.text[1][1]);
+				textBox.CustomBox3(Text.text[13][0], Text.text[13][1], Text.text[13][2]);
+				Console.Write(Text.text[4][3] + Text.text[0][2] + Text.text[4][0]);
+
+				imgs = int.TryParse(Console.ReadLine(), out imgs1);
+
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.BackgroundColor = ConsoleColor.DarkCyan;
+				Console.Clear ();
+			}
 		}
 
 		public void ImageName() {

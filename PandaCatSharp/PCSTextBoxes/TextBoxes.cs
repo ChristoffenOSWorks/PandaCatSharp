@@ -93,7 +93,7 @@ namespace PandaCat {
 				}			
 				Console.Write (Text.text[3][6]);
 			} else {
-				Console.Write ("Issues");
+				Console.Write ("");
 			}
 		}
 
@@ -226,7 +226,7 @@ namespace PandaCat {
 
 			} else {
 
-				Console.Write ("Issues");
+				Console.Write ("");
 
 			}
 

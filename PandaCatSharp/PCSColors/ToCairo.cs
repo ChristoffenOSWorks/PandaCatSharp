@@ -70,13 +70,15 @@ namespace PandaCat {
 				Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 
 				r = float.TryParse(Console.ReadLine(), out r0);
-			}
 
-			Console.ForegroundColor = ConsoleColor.White;
-			Console.BackgroundColor = ConsoleColor.DarkCyan;
-			Console.Clear();
-			textBox.CustomBox2 (Text.text[7][0], Text.text[7][1]);
-			textBox.CustomBox2 (Text.text[5][0], Text.text[8][2] + r0);
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.BackgroundColor = ConsoleColor.DarkCyan;
+				Console.Clear();
+				textBox.CustomBox2 (Text.text[7][0], Text.text[7][1]);
+				textBox.CustomBox2 (Text.text[5][0], Text.text[8][2] + r0);
+
+				toCairo_R_set ();
+			}
 
 			toCairo_R_set ();
 		}
@@ -88,18 +90,13 @@ namespace PandaCat {
 				Console.Clear ();
 
 				Console.Write (Text.text[0][2]);
+				textBox.CustomBox2 (Text.text[7][0], Text.text[7][1]);
+				textBox.CustomBox2 (Text.text[5][0], Text.text[8][2] + r0);
 				textBox.CustomBox2 (Text.text[5][4], Text.text[2][2]);
 				Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 
 				g = float.TryParse(Console.ReadLine(), out g0);
 			}
-
-			Console.ForegroundColor = ConsoleColor.White;
-			Console.BackgroundColor = ConsoleColor.DarkCyan;
-			Console.Clear();
-			textBox.CustomBox2 (Text.text[7][0], Text.text[7][1]);
-			textBox.CustomBox2 (Text.text[5][0], Text.text[8][2] + r0);
-			textBox.CustomBox2 (Text.text[5][1], Text.text[8][2] + g0);
 
 			toCairo_G_set ();
 		}
@@ -114,6 +111,8 @@ namespace PandaCat {
 				textBox.CustomBox2 (Text.text[7][0], Text.text[7][1]);
 
 				Console.Write (Text.text[0][2]);
+				textBox.CustomBox2 (Text.text[5][0], Text.text[8][2] + r0);
+				textBox.CustomBox2 (Text.text[5][1], Text.text[8][2] + g0);
 				textBox.CustomBox2 (Text.text[5][5], Text.text[2][3]);
 				Console.Write (Text.text[4][3] + Text.text[0][2] + ">> ");
 

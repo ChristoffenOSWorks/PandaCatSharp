@@ -16,7 +16,8 @@ using System.IO;
 namespace PandaCat {
 	public class Tabby {
 		public static void Main (string[] args) {
-			Loop.ID10TChecker(args);
+			Loop loop = new Loop();
+			loop.ID10TChecker(args);
 		}
 	}
 }

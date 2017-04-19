@@ -53,6 +53,8 @@ namespace PandaCat {
 
 			Template ctext5 = new Template();
 			ctext5.Part5();
+
+			Environment.Exit(0);
 		}
 	}
 }
