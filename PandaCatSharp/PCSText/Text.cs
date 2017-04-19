@@ -108,9 +108,9 @@ namespace PandaCat {
 			 * Text for entering a file and why at Text.text[9][]
 			 **/
 			new String[] {
-				"This application will write C files to the folder it is run in.",
-				"C files are generated here using the Cairo API, so you don't have to write them.",
-				"So, what would you like to name the new C file generated this run?"
+				"Based on the input you provide, this app will produce vector images using a tool called Cairo.",
+				"It is likely that one image is made up of stacked 'layers.'",
+				"This image will be equal to 1 layer. What would you like to call it?"
 			},
 
 			/**

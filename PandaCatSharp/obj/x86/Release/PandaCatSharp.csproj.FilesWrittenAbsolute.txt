@@ -1,0 +1,5 @@
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/obj/x86/Release/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PandaCatSharp.exe
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/obj/x86/Release/PandaCatSharp.exe
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCSImageNameLoop.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCSLoop.dll

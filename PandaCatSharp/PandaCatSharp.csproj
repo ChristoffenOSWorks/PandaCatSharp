@@ -38,7 +38,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="Cadence.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PandaCatSharp.csproj" />
@@ -93,6 +92,10 @@
     <ProjectReference Include="PCSImageNameLoop\PCSImageNameLoop.csproj">
       <Project>{FE53D059-D19C-49A1-9137-46EDAE66F183}</Project>
       <Name>PCSImageNameLoop</Name>
+    </ProjectReference>
+    <ProjectReference Include="PCSLoop\PCSLoop.csproj">
+      <Project>{19C0B232-1B9B-45D8-872B-28493AAB1CC3}</Project>
+      <Name>PCSLoop</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCSTextBoxes", "PCSTextBoxe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCSImageNameLoop", "PCSImageNameLoop\PCSImageNameLoop.csproj", "{FE53D059-D19C-49A1-9137-46EDAE66F183}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCSLoop", "PCSLoop\PCSLoop.csproj", "{19C0B232-1B9B-45D8-872B-28493AAB1CC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCSErrorHandler", "PCSErrorHandler\PCSErrorHandler.csproj", "{B3460858-08BB-4462-B74B-455E1278CC6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -67,6 +71,14 @@ Global
 		{FE53D059-D19C-49A1-9137-46EDAE66F183}.Debug|x86.Build.0 = Debug|Any CPU
 		{FE53D059-D19C-49A1-9137-46EDAE66F183}.Release|x86.ActiveCfg = Release|Any CPU
 		{FE53D059-D19C-49A1-9137-46EDAE66F183}.Release|x86.Build.0 = Release|Any CPU
+		{19C0B232-1B9B-45D8-872B-28493AAB1CC3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{19C0B232-1B9B-45D8-872B-28493AAB1CC3}.Debug|x86.Build.0 = Debug|Any CPU
+		{19C0B232-1B9B-45D8-872B-28493AAB1CC3}.Release|x86.ActiveCfg = Release|Any CPU
+		{19C0B232-1B9B-45D8-872B-28493AAB1CC3}.Release|x86.Build.0 = Release|Any CPU
+		{B3460858-08BB-4462-B74B-455E1278CC6A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B3460858-08BB-4462-B74B-455E1278CC6A}.Debug|x86.Build.0 = Debug|Any CPU
+		{B3460858-08BB-4462-B74B-455E1278CC6A}.Release|x86.ActiveCfg = Release|Any CPU
+		{B3460858-08BB-4462-B74B-455E1278CC6A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0

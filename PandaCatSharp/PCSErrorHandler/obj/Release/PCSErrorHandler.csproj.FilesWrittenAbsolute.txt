@@ -1,0 +1,3 @@
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSErrorHandler/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSErrorHandler/bin/Release/PCSErrorHandler.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSErrorHandler/obj/Release/PCSErrorHandler.dll

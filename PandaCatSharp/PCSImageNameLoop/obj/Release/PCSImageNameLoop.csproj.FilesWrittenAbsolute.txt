@@ -1,0 +1,7 @@
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSImageNameLoop/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSImageNameLoop/bin/Release/PCSImageNameLoop.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSImageNameLoop/obj/Release/PCSImageNameLoop.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSImageNameLoop/bin/Release/PCFiles.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSImageNameLoop/bin/Release/PCTemplate.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSImageNameLoop/bin/Release/PCTextBoxes.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSImageNameLoop/bin/Release/PCText.dll

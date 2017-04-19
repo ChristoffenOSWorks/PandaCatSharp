@@ -1,0 +1,3 @@
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSLineTo/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/bin/Release/PCLineTo.dll
+/home/mgagemorgan/test/PandaCatSharp/PandaCatSharp/PCSLineTo/obj/Release/PCLineTo.dll

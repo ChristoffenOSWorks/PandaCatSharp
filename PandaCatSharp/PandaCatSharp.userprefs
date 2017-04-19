@@ -1,30 +1,14 @@
 ﻿<Properties StartupConfiguration="{53045751-34F0-4648-B2EE-5EA4AF82ABD5}|Default" VersionControlDisabled="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Cadence.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PCSColors/ToCairo.cs">
     <Files>
-      <File FileName="Program.cs" Line="53" Column="1" />
-      <File FileName="PCSColors/ToCairo.cs" Line="97" Column="4" />
-      <File FileName="PCSImageNameLoop/ImageNameLoop.cs" Line="24" Column="39" />
-      <File FileName="PCSText/Text.cs" Line="143" Column="16" />
-      <File FileName="PCSTemplate/Template.cs" Line="27" Column="75" />
-      <File FileName="Cadence.cs" Line="55" Column="4" />
-      <File FileName="PCSColors/ColorConverter.cs" Line="12" Column="17" NotebookId="1" />
-      <File FileName="PCSFiles/Files.cs" Line="29" Column="1" NotebookId="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="PCSText/Text.cs" Line="113" Column="74" />
+      <File FileName="PCSErrorHandler/MyClass.cs" Line="1" Column="1" />
+      <File FileName="PCSLoop/CLIMethods.cs" Line="28" Column="15" />
+      <File FileName="PCSLoop/Cadence.cs" Line="1" Column="1" />
+      <File FileName="PCSColors/ToCairo.cs" Line="96" Column="4" />
+      <File FileName="PCSLoop/Loop.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="PandaCatSharp" expanded="True">
-            <Node name="PandaCatSharp" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Cadence.cs" selected="True" />
-            </Node>
-            <Node name="PCSImageNameLoop" expanded="True" />
-            <Node name="PCSTemplate" expanded="True" />
-            <Node name="PCSText" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
